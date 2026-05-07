@@ -5,10 +5,22 @@
   <title>Educação & Parcerias — Instituto Somos Água</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    #main-nav {
+      background: #0d1e3c !important;
+      border-bottom: none !important;
+    }
+    #main-nav .nav-logo { color: white; }
+    #main-nav .nav-links a { color: rgba(255,255,255,.8); }
+    #main-nav .nav-links a:hover,
+    #main-nav .nav-links a.active { color: white; border-bottom-color: rgba(255,255,255,.5); }
+    #main-nav .nav-cta { color: white !important; border-color: rgba(255,255,255,.4); }
+    #main-nav .hamburger span { background: white; }
+  </style>
 </head>
 <body>
 <nav id="main-nav">
-  <a href="index.html" class="nav-logo">Instituto <span>Somos Água</span></a>
+  <a href="index.html" class="nav-logo" style="padding:0;line-height:0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 68" height="42" style="display:block;"><defs><radialGradient id="dg" cx="38%" cy="28%" r="65%"><stop offset="0%" stop-color="#9AE8F8"/><stop offset="45%" stop-color="#1BBDD8"/><stop offset="100%" stop-color="#0A7A96"/></radialGradient></defs><ellipse cx="33" cy="59" rx="24" ry="4.5" stroke="#1BBAD6" stroke-width="1.0" fill="none" opacity="0.38"/><ellipse cx="33" cy="59" rx="15" ry="3" stroke="#1BBAD6" stroke-width="1.2" fill="none" opacity="0.58"/><ellipse cx="33" cy="59" rx="8" ry="1.8" stroke="#1BBAD6" stroke-width="1.5" fill="none" opacity="0.82"/><path d="M33 5 C33 5 14 29 14 43 C14 53.8 22.6 60 33 60 C43.4 60 52 53.8 52 43 C52 29 33 5 33 5Z" fill="url(#dg)"/><ellipse cx="25" cy="28" rx="3.5" ry="8" fill="white" opacity="0.3" transform="rotate(-20 25 28)"/><text x="64" y="38" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="400" font-style="italic" fill="white" letter-spacing="0.5">Somos Água</text><text x="67" y="56" font-family="Inter, sans-serif" font-size="9.5" font-weight="300" fill="rgba(255,255,255,0.58)" letter-spacing="6">INSTITUTO</text></svg></a>
   <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="nav-links">
     <li><a href="sobre.html">Sobre</a></li>

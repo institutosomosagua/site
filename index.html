@@ -18,7 +18,7 @@
     }
     .manifesto-hero-bg {
       position: absolute; inset: 0;
-      background: url('imgs/rio-top.jpg') center 40% / cover no-repeat;
+      background: url('imgs/foz.jpg') center 55% / cover no-repeat;
     }
     .manifesto-hero-bg::after {
       content: '';
@@ -29,6 +29,7 @@
     /* transparent nav over hero */
     .hero-nav {
       position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+      background: #0d1e3c;
       height: 64px;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 2.5rem;
@@ -65,8 +66,9 @@
       position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
       z-index: 5;
       color: rgba(255,255,255,.5);
-      font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
-      display: flex; flex-direction: column; align-items: center; gap: .5rem;
+      font-size: .62rem; letter-spacing: .22em; text-transform: uppercase;
+      display: flex; flex-direction: column; align-items: center; gap: .6rem;
+      white-space: nowrap;
     }
     .scroll-hint::after {
       content: '';
@@ -201,7 +203,7 @@
   <div class="manifesto-hero-bg"></div>
 
   <nav class="hero-nav" id="main-nav">
-    <a href="index.html" class="nav-logo" style="padding:0;"><img src="imgs/logo.svg" alt="Instituto Somos Água" style="height:40px;width:auto;display:block;"/></a>
+    <a href="index.html" class="nav-logo" style="padding:0;line-height:0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 68" height="42" style="display:block;"><defs><radialGradient id="dg" cx="38%" cy="28%" r="65%"><stop offset="0%" stop-color="#9AE8F8"/><stop offset="45%" stop-color="#1BBDD8"/><stop offset="100%" stop-color="#0A7A96"/></radialGradient></defs><ellipse cx="33" cy="59" rx="24" ry="4.5" stroke="#1BBAD6" stroke-width="1.0" fill="none" opacity="0.38"/><ellipse cx="33" cy="59" rx="15" ry="3" stroke="#1BBAD6" stroke-width="1.2" fill="none" opacity="0.58"/><ellipse cx="33" cy="59" rx="8" ry="1.8" stroke="#1BBAD6" stroke-width="1.5" fill="none" opacity="0.82"/><path d="M33 5 C33 5 14 29 14 43 C14 53.8 22.6 60 33 60 C43.4 60 52 53.8 52 43 C52 29 33 5 33 5Z" fill="url(#dg)"/><ellipse cx="25" cy="28" rx="3.5" ry="8" fill="white" opacity="0.3" transform="rotate(-20 25 28)"/><text x="64" y="38" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="400" font-style="italic" fill="white" letter-spacing="0.5">Somos Água</text><text x="67" y="56" font-family="Inter, sans-serif" font-size="9.5" font-weight="300" fill="rgba(255,255,255,0.58)" letter-spacing="6">INSTITUTO</text></svg></a>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="nav-links">
       <li><a href="sobre.html">Sobre</a></li>
@@ -216,10 +218,9 @@
   <div class="manifesto-hero-content">
     <span class="eyebrow-light">Instituto Somos Água</span>
     <h1>Nós somos <em>Água</em>.<br/>E a Água somos nós.</h1>
-    <a href="sobre.html" class="btn btn-dark" style="display:inline-block;">Conheça o Instituto</a>
   </div>
 
-  <div class="scroll-hint">rolar</div>
+  <div class="scroll-hint">Rolar para ver nosso manifesto</div>
 </section>
 
 <!-- ══ OPENING ══ -->
@@ -251,7 +252,7 @@
 <!-- ══ VERSO ══ -->
 <div class="manifesto-verse">
   <div class="container">
-    <p>Vemos o Templo das Águas como um farol vivo — um centro de referência, pesquisa, educação e espiritualidade aplicada, onde ciência, ancestralidade e sensibilidade caminham juntas.</p>
+    <p>Vemos Piracanga como um farol vivo — um centro de referência, pesquisa, educação e espiritualidade aplicada, onde ciência, ancestralidade e sensibilidade caminham juntas.</p>
   </div>
 </div>
 
@@ -291,7 +292,7 @@
 <!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo"><img src="imgs/logo.svg" alt="Instituto Somos Água" style="height:52px;width:auto;display:block;margin-bottom:.5rem;"/></div>
+    <div class="footer-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 76" height="46" style="display:block;"><defs><radialGradient id="dg" cx="38%" cy="26%" r="68%"><stop offset="0%" stop-color="#A8F0FF"/><stop offset="40%" stop-color="#1BC8E0"/><stop offset="100%" stop-color="#077090"/></radialGradient><radialGradient id="inner" cx="60%" cy="65%" r="50%"><stop offset="0%" stop-color="#055570" stop-opacity="0.7"/><stop offset="100%" stop-color="#055570" stop-opacity="0"/></radialGradient></defs><ellipse cx="37" cy="66" rx="31" ry="6" stroke="#0B9DBB" stroke-width="1.1" fill="none" opacity="0.4"/><ellipse cx="37" cy="66" rx="21" ry="4.2" stroke="#0EAED0" stroke-width="1.35" fill="none" opacity="0.62"/><ellipse cx="37" cy="66" rx="11" ry="2.4" stroke="#15C0DC" stroke-width="1.7" fill="none" opacity="0.88"/><path d="M37 3 C37 3 13 33 13 49 C13 62 24 68 37 68 C50 68 61 62 61 49 C61 33 37 3 37 3Z" fill="url(#dg)"/><path d="M37 3 C37 3 13 33 13 49 C13 62 24 68 37 68 C50 68 61 62 61 49 C61 33 37 3 37 3Z" fill="url(#inner)"/><ellipse cx="27" cy="32" rx="4.5" ry="10" fill="white" opacity="0.32" transform="rotate(-18 27 32)"/><ellipse cx="23" cy="26" rx="2" ry="3.5" fill="white" opacity="0.55" transform="rotate(-18 23 26)"/><text x="75" y="44" font-family="'Pirata One', cursive" font-size="31" fill="white" letter-spacing="1">Somos Água</text><text x="78" y="63" font-family="Inter, sans-serif" font-size="10.5" font-weight="300" fill="rgba(255,255,255,0.6)" letter-spacing="6.5">INSTITUTO</text></svg></div>
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Instituto Somos Água</h4>
