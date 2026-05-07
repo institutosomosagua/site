@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manifesto — Instituto Somos Água</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── MANIFESTO HERO ── */
+    .manifesto-hero {
+      position: relative;
+      height: 70vh; min-height: 480px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+    }
+    .manifesto-hero-bg {
+      position: absolute; inset: 0;
+      background: url('imgs/rio-top.jpg') center 40% / cover no-repeat;
+    }
+    .manifesto-hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,.48);
+    }
+    .manifesto-hero-content {
+      position: relative; z-index: 5;
+      padding: 0 2rem;
+    }
+    .manifesto-hero-content .eyebrow-light {
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(255,255,255,.65);
+      margin-bottom: 1.5rem; display: block;
+    }
+    .manifesto-hero-content h1 {
+      color: white;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      text-shadow: 0 2px 32px rgba(0,0,0,.3);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .manifesto-hero-content h1 em {
+      font-style: italic;
+      color: #a8dfe8;
+    }
+
+    /* ── OPENING ── */
+    .manifesto-opening {
+      padding: 5rem 0 4rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .manifesto-opening p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+      line-height: 1.75;
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    /* ── MANIFESTO BODY ── */
+    .manifesto-block {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .manifesto-block:last-of-type {
+      border-bottom: none;
+    }
+    .manifesto-label {
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--water);
+      margin-bottom: 2rem; display: block;
+    }
+    .manifesto-text {
+      max-width: 680px;
+    }
+    .manifesto-text p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--ink);
+      margin-bottom: 1.4rem;
+    }
+    .manifesto-text p:last-child { margin-bottom: 0; }
+
+    /* ── HIGHLIGHTED VERSE ── */
+    .manifesto-verse {
+      padding: 4rem 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .manifesto-verse p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+      line-height: 1.65;
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--ink);
+      font-style: italic;
+    }
+
+    /* ── SPLIT LAYOUT ── */
+    .manifesto-split {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .manifesto-split-label {
+      position: sticky;
+      top: 5rem;
+    }
+    .manifesto-split-label h2 {
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin-bottom: .5rem;
+    }
+    .manifesto-split-label p {
+      font-size: .85rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    /* ── CLOSING DECLARATION ── */
+    .manifesto-closing {
+      padding: 6rem 0;
+      text-align: center;
+      background: var(--ink);
+      color: white;
+    }
+    .manifesto-closing p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 2.6vw, 1.65rem);
+      line-height: 1.7;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      color: rgba(255,255,255,.92);
+    }
+    .manifesto-closing .closing-cite {
+      font-family: 'Inter', sans-serif;
+      font-size: .8rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+      display: block;
+      margin-top: 2rem;
+    }
+    .manifesto-closing .btn-outline-white {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: .75rem 2rem;
+      border: 1px solid rgba(255,255,255,.35);
+      color: white;
+      font-size: .85rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-decoration: none;
+      transition: border-color .2s, background .2s;
+    }
+    .manifesto-closing .btn-outline-white:hover {
+      border-color: white;
+      background: rgba(255,255,255,.08);
+    }
+
+    @media (max-width: 700px) {
+      .manifesto-split { grid-template-columns: 1fr; gap: 1.5rem; }
+      .manifesto-split-label { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">Instituto <span>Somos Água</span></a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="certificacao.html">Certificação</a></li>
+    <li><a href="resultados.html">Resultados</a></li>
+    <li><a href="educacao.html">Educação</a></li>
+    <li><a href="proximos.html">Próximos Passos</a></li>
+    <li><a href="manifesto.html" class="active">Manifesto</a></li>
+    <li><a href="mailto:contato@somosagua.org" class="nav-cta">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="manifesto-hero">
+  <div class="manifesto-hero-bg"></div>
+  <div class="manifesto-hero-content">
+    <span class="eyebrow-light">Instituto Somos Água</span>
+    <h1>Nós somos <em>Água</em>.<br/>E a Água somos nós.</h1>
+  </div>
+</div>
+
+<!-- OPENING -->
+<section class="manifesto-opening">
+  <div class="container">
+    <p>Em nossos corpos, territórios, decisões e futuros — a Água nos constitui e nos une. O Instituto Somos Água existe para lembrar a humanidade que a realidade se transforma quando a consciência muda. Quando o olhar se expande, o cuidado emerge naturalmente. Quando a intenção é coerente, a matéria responde.</p>
+  </div>
+</section>
+
+<!-- VISÃO -->
+<section class="manifesto-block">
+  <div class="container">
+    <div class="manifesto-split">
+      <div class="manifesto-split-label">
+        <span class="manifesto-label">Visão</span>
+        <h2>O que visualizamos</h2>
+        <p>Um presente e futuro onde cuidar da Água é cultura viva, não exceção.</p>
+      </div>
+      <div class="manifesto-text">
+        <p>Visualizamos um Brasil — e um mundo — onde o cuidado das Águas é cultura viva, não exceção.</p>
+        <p>Vemos o Instituto Somos Água atuando em rios, nascentes, escolas, comunidades, cidades e ecovilas. A Certificação Participativa de Cuidado das Águas se expande como uma tecnologia social reconhecida, replicável e respeitada, presente em todos os biomas do país e inspirando iniciativas em outros territórios do planeta.</p>
+        <p>Vemos comunidades autônomas, capacitadas e conscientes, assumindo a responsabilidade coletiva pelo saneamento ecológico, pela educação das novas gerações e pela regeneração dos ciclos da Água.</p>
+        <p>Vemos políticas públicas sendo influenciadas por práticas que já funcionam na vida real. Vemos parcerias com universidades, escolas, coletivos, empresas e governos alinhados com o mesmo propósito: cuidar da Água como quem cuida da própria vida.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERSO DESTACADO -->
+<div class="manifesto-verse">
+  <div class="container">
+    <p>Vemos o Templo das Águas como um farol vivo — um centro de referência, pesquisa, educação e espiritualidade aplicada, onde ciência, ancestralidade e sensibilidade caminham juntas.</p>
+  </div>
+</div>
+
+<!-- PROSPERIDADE -->
+<section class="manifesto-block">
+  <div class="container">
+    <div class="manifesto-split">
+      <div class="manifesto-split-label">
+        <span class="manifesto-label">Prosperidade</span>
+        <h2>O que sentimos</h2>
+        <p>Uma prosperidade limpa, ética e regenerativa — que sustenta pessoas e territórios.</p>
+      </div>
+      <div class="manifesto-text">
+        <p>Sentimos a prosperidade fluindo. Uma prosperidade limpa, ética e regenerativa, que sustenta o Instituto, as pessoas envolvidas e os territórios onde atuamos.</p>
+        <p>Sentimos abundância de recursos, pessoas e oportunidades chegando com facilidade, sincronicidade e coerência. Tudo flui.</p>
+        <p>Vemos conteúdos, produtos, formações, certificações e experiências alcançando milhares de pessoas, despertando consciência e criando um novo hábito coletivo: o hábito de cuidar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOTO FULL -->
+<img src="imgs/hero.jpg" alt="Rio Piracanga correndo para o mar" class="photo-full tall"/>
+<p class="photo-caption">Rio Piracanga encontrando o mar · Península de Maraú · Sul da Bahia</p>
+
+<!-- DECLARAÇÃO FINAL -->
+<div class="manifesto-closing">
+  <div class="container">
+    <p>Escolhemos sentir gratidão antes que os resultados apareçam, porque sabemos que o campo responde ao que vibramos.</p>
+    <p>Somos o Instituto Somos Água manifestando um presente onde a Água é honrada, as comunidades são fortes e a vida flui em equilíbrio.</p>
+    <span class="closing-cite">Instituto Somos Água · Manifesto</span>
+    <br/>
+    <a href="mailto:contato@somosagua.org" class="btn-outline-white">Junte-se ao movimento</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Instituto Somos Água</div>
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Instituto Somos Água</h4><p>Ecovila Piracanga · Sul da Bahia · Brasil</p></div>
+      <div class="footer-col"><h4>Páginas</h4><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="certificacao.html">Certificação</a><a href="resultados.html">Resultados</a><a href="educacao.html">Educação</a><a href="proximos.html">Próximos Passos</a><a href="manifesto.html">Manifesto</a></div>
+      <div class="footer-col"><h4>Contato</h4><a href="mailto:contato@somosagua.org">contato@somosagua.org</a><a href="https://instagram.com/julisomosagua" target="_blank">@julisomosagua</a></div>
+    </div>
+    <p class="footer-bottom">Relatório de Impacto 2024/25 · Instituto Somos Água</p>
+  </div>
+</footer>
+<script>document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));</script>
+</body>
+</html>

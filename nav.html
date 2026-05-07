@@ -1,0 +1,23 @@
+<!-- SHARED NAV — paste inside <body> of each page -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">Instituto Somos Água</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="certificacao.html">Certificação</a></li>
+    <li><a href="resultados.html">Resultados</a></li>
+    <li><a href="educacao.html">Educação &amp; Parcerias</a></li>
+    <li><a href="proximos.html">Próximos Passos</a></li>
+    <li><a href="mailto:contato@somosagua.org" class="nav-cta">Contato</a></li>
+  </ul>
+</nav>
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('nav-links').classList.toggle('open');
+  });
+  // mark active link
+  const links = document.querySelectorAll('.nav-links a');
+  links.forEach(a => { if (a.href === location.href) a.classList.add('active'); });
+</script>

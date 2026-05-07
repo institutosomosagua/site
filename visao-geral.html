@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instituto Somos Água</title>
+  <meta name="description" content="Certificação Participativa de Cuidado das Águas em Piracanga, Bahia."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body { padding-top: 0; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100vh; min-height: 560px;
+      display: flex; align-items: flex-end;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('imgs/hero.jpg') center center / cover no-repeat;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.12) 0%,
+        rgba(0,0,0,.08) 35%,
+        rgba(0,0,0,.55) 100%
+      );
+    }
+    .hero-nav {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem;
+    }
+    .hero-nav .nav-logo { color: white; }
+    .hero-nav .nav-links a { color: rgba(255,255,255,.82); }
+    .hero-nav .nav-links a:hover { color: white; }
+    .hero-nav .nav-cta { color: white !important; border-color: rgba(255,255,255,.5); }
+    .hero-nav .hamburger span { background: white; }
+
+    .hero-content {
+      position: relative; z-index: 5;
+      padding: 0 2.5rem 4rem;
+      max-width: 720px;
+    }
+    .hero-tag {
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(255,255,255,.7);
+      margin-bottom: 1rem; display: block;
+    }
+    .hero h1 {
+      color: white;
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+      margin-bottom: 1.1rem;
+      text-shadow: 0 2px 24px rgba(0,0,0,.2);
+    }
+    .hero h1 em { font-style: normal; color: #a8dfe8; }
+    .hero-sub {
+      color: rgba(255,255,255,.78);
+      font-size: 1.05rem; font-weight: 300;
+      max-width: 480px; line-height: 1.65;
+      margin-bottom: 2rem; font-style: italic;
+    }
+    .hero-btns { display: flex; gap: .75rem; flex-wrap: wrap; }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-cell {
+      padding: 2rem 2.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .stat-cell:last-child { border-right: none; }
+
+    /* ── INTRO ── */
+    .intro { background: var(--off-white); }
+
+    /* ── PAGES GRID ── */
+    .pages-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      border-top: 1px solid var(--border);
+    }
+    .page-cell {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid var(--border);
+      text-decoration: none; color: inherit;
+      display: block;
+      transition: background .15s;
+    }
+    .page-cell:last-child { border-right: none; }
+    .page-cell:hover { background: var(--off-white); }
+    .page-cell .n {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; color: var(--border);
+      font-weight: 700; margin-bottom: 1rem; display: block;
+    }
+    .page-cell h3 { font-size: .97rem; margin-bottom: .5rem; }
+    .page-cell p { font-size: .85rem; color: var(--ink-muted); margin-bottom: 1rem; }
+    .page-cell .arrow { font-size: .78rem; color: var(--water); font-weight: 600; letter-spacing: .06em; }
+
+    /* ── QUOTE SECTION ── */
+    .quote-section {
+      padding: 6rem 0;
+      text-align: center;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (max-width: 860px) {
+      .hero-content { padding: 0 1.5rem 3rem; }
+      .hero-nav { padding: 0 1.25rem; }
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .stat-cell:nth-child(2) { border-right: none; }
+      .stat-cell:nth-child(3) { border-right: 1px solid var(--border); }
+      .pages-grid { grid-template-columns: 1fr; }
+      .page-cell { border-right: none; border-bottom: 1px solid var(--border); }
+      .page-cell:last-child { border-bottom: none; }
+    }
+    @media (max-width: 500px) {
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .stat-cell { padding: 1.5rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <nav class="hero-nav" id="main-nav">
+    <a href="index.html" class="nav-logo">Instituto <span>Somos Água</span></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="certificacao.html">Certificação</a></li>
+      <li><a href="resultados.html">Resultados</a></li>
+      <li><a href="educacao.html">Educação</a></li>
+      <li><a href="proximos.html">Próximos Passos</a></li>
+      <li><a href="manifesto.html">Manifesto</a></li>
+      <li><a href="mailto:contato@somosagua.org" class="nav-cta">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <span class="hero-tag">Piracanga · Sul da Bahia · Brasil</span>
+    <h1>É a <em>Água</em><br/>quem permite<br/>a Vida</h1>
+    <p class="hero-sub">"É um organismo vivo e nosso bem mais precioso. É quem nos une e permite o nosso bem viver coletivo."</p>
+    <div class="hero-btns">
+      <a href="sobre.html" class="btn btn-dark">Conheça o Instituto</a>
+      <a href="resultados.html" class="btn btn-outline">Ver Resultados</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS STRIP ══ -->
+<div class="stats-strip">
+  <div class="stat-cell">
+    <div class="stat-num">71<sup>%</sup></div>
+    <div class="stat-label">adesão das casas</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">400<sup>%</sup></div>
+    <div class="stat-label">queda na contaminação</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">57</div>
+    <div class="stat-label">casas certificadas</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">18</div>
+    <div class="stat-label">episódios do podcast</div>
+  </div>
+</div>
+
+<!-- ══ INTRO ══ -->
+<section class="intro">
+  <div class="container">
+    <div class="grid-2 center">
+      <div>
+        <span class="eyebrow">O Projeto</span>
+        <h2>Uma certificação participativa de cuidado das Águas</h2>
+        <p>Nascida em Piracanga, a Certificação Somos Água é um processo anual de monitoramento, educação e corresponsabilidade coletiva com as Águas — inspirada nos Sistemas Participativos de Garantia.</p>
+        <p>O Instituto Somos Água foi fundado em 2024 para dar sustentabilidade e legitimidade a mais de 10 anos de ativismo hídrico na ecovila.</p>
+        <a href="sobre.html" class="btn btn-water" style="margin-top:1.25rem;">Conheça a história</a>
+      </div>
+      <div>
+        <img src="imgs/foz.jpg" alt="Rio Piracanga encontrando o mar" style="width:100%;display:block;"/>
+        <p style="font-size:.73rem;color:var(--ink-muted);margin-top:.4rem;text-align:right;">Rio Piracanga · Foz</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOTO FULL ══ -->
+<img src="imgs/ecovila.jpg" alt="Vista aérea da Ecovila Piracanga" class="photo-full"/>
+<p class="photo-caption">Ecovila Piracanga · Mata Atlântica, praia e mar · Sul da Bahia</p>
+
+<!-- ══ PAGES ══ -->
+<section style="padding-bottom:0;">
+  <div class="container">
+    <span class="eyebrow">Explore</span>
+    <h2>O que você encontra aqui</h2>
+  </div>
+</section>
+<div class="pages-grid">
+  <a href="sobre.html" class="page-cell">
+    <span class="n">01</span>
+    <h3>Sobre o Instituto</h3>
+    <p>A história, o território de Piracanga e os Objetivos de Desenvolvimento Sustentável.</p>
+    <span class="arrow">Saiba mais →</span>
+  </a>
+  <a href="certificacao.html" class="page-cell">
+    <span class="n">02</span>
+    <h3>Certificação Participativa</h3>
+    <p>Os 8 critérios de cuidado, as 4 etapas do processo e o que é um SPG.</p>
+    <span class="arrow">Ver critérios →</span>
+  </a>
+  <a href="resultados.html" class="page-cell">
+    <span class="n">03</span>
+    <h3>Resultados 2024/25</h3>
+    <p>Adesão, evolução da qualidade da água e impacto do primeiro ciclo.</p>
+    <span class="arrow">Ver impacto →</span>
+  </a>
+  <a href="educacao.html" class="page-cell">
+    <span class="n">04</span>
+    <h3>Educação & Parcerias</h3>
+    <p>Podcast, encontros, capacitações e a rede de parceiros estratégicos.</p>
+    <span class="arrow">Explorar →</span>
+  </a>
+  <a href="proximos.html" class="page-cell">
+    <span class="n">05</span>
+    <h3>Próximos Passos</h3>
+    <p>Aprendizados do primeiro ciclo e os sonhos para o futuro.</p>
+    <span class="arrow">Ver planos →</span>
+  </a>
+  <a href="manifesto.html" class="page-cell">
+    <span class="n">06</span>
+    <h3>Manifesto</h3>
+    <p>Nossa visão, propósito e a declaração de por que a Água importa acima de tudo.</p>
+    <span class="arrow">Ler o manifesto →</span>
+  </a>
+</div>
+
+<!-- ══ QUOTE ══ -->
+<div class="quote-section">
+  <div class="container">
+    <p class="pull-quote">
+      "Gotas sozinhas evaporam.<br/>Unidas, podem formar grandes corpos d'Água."
+      <span class="pull-cite">Instituto Somos Água · Relatório de Impacto 2024/25</span>
+    </p>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Instituto Somos Água</div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Instituto Somos Água</h4>
+        <p>Certificação Participativa de<br/>Cuidado das Águas</p>
+        <p style="margin-top:.75rem;">Ecovila Piracanga · Península de Maraú<br/>Sul da Bahia · Brasil</p>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="sobre.html">Sobre</a>
+        <a href="certificacao.html">Certificação</a>
+        <a href="resultados.html">Resultados</a>
+        <a href="educacao.html">Educação</a>
+        <a href="proximos.html">Próximos Passos</a>
+        <a href="manifesto.html">Manifesto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="mailto:contato@somosagua.org">contato@somosagua.org</a>
+        <a href="https://instagram.com/julisomosagua" target="_blank">@julisomosagua</a>
+      </div>
+    </div>
+    <p class="footer-bottom">Relatório de Impacto 2024/25 · Instituto Somos Água</p>
+  </div>
+</footer>
+
+<script>
+  const hb = document.getElementById('hamburger');
+  const nl = document.getElementById('nav-links');
+  hb.addEventListener('click', () => nl.classList.toggle('open'));
+</script>
+</body>
+</html>
