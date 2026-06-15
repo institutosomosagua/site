@@ -306,3 +306,50 @@ footer {
   .footer-grid { grid-template-columns: 1fr; }
   .container { padding: 0 1.25rem; }
 }
+
+/* ════════════════════════════════
+   SOCIAL & CONTATO (interativo)
+════════════════════════════════ */
+
+/* ── ícones do rodapé (fundo escuro) ── */
+.social-row { display:flex; gap:.7rem; flex-wrap:wrap; align-items:center; margin-bottom:1rem; }
+.social-btn {
+  width:40px; height:40px; border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid rgba(255,255,255,.22);
+  color:rgba(255,255,255,.72);
+  transition:transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.social-btn svg { width:19px; height:19px; fill:currentColor; }
+.social-btn:hover { transform:translateY(-4px); color:#fff; border-color:transparent; }
+.social-btn.ig:hover { background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+.social-btn.li:hover { background:#0A66C2; }
+.social-btn.sp:hover { background:#1DB954; }
+.social-btn.em:hover { background:var(--water); }
+.footer-email { font-size:.83rem; }
+
+/* ── seção dedicada de contato (fundo claro) ── */
+.connect-section { background:var(--off-white); border-top:1px solid var(--border); }
+.contact-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.1rem; max-width:760px; margin-top:2.25rem; }
+.contact-card {
+  display:flex; align-items:center; gap:1.1rem;
+  padding:1.25rem 1.5rem; border:1px solid var(--border);
+  background:var(--white); text-decoration:none; color:var(--ink);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.contact-card:hover { transform:translateY(-4px); box-shadow:0 14px 30px rgba(0,0,0,.08); border-color:transparent; }
+.contact-ic {
+  width:50px; height:50px; border-radius:50%; flex-shrink:0;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:var(--off-white); color:var(--ink);
+  transition:background .25s ease, color .25s ease, transform .25s ease;
+}
+.contact-ic svg { width:24px; height:24px; fill:currentColor; }
+.contact-card:hover .contact-ic { transform:scale(1.08); }
+.contact-card .c-label { display:block; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:.15rem; }
+.contact-card .c-handle { display:block; font-size:.97rem; font-weight:500; color:var(--ink); }
+.contact-card.ig:hover .contact-ic { background:linear-gradient(45deg,#f09433,#dc2743,#bc1888); color:#fff; }
+.contact-card.li:hover .contact-ic { background:#0A66C2; color:#fff; }
+.contact-card.sp:hover .contact-ic { background:#1DB954; color:#fff; }
+.contact-card.em:hover .contact-ic { background:var(--water); color:#fff; }
+@media (max-width:600px){ .contact-grid { grid-template-columns:1fr; } }
