@@ -354,3 +354,6 @@ footer {
 .contact-card.em:hover .contact-ic { background:var(--water); color:#fff; }
 @media (max-width:600px){ .contact-grid { grid-template-columns:1fr; } }
 .connect-section{scroll-margin-top:84px;}
+
+.social-btn.yt:hover{background:#FF0000;}
+.contact-card.yt:hover .contact-ic{background:#FF0000;color:#fff;}
