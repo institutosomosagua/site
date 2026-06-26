@@ -423,3 +423,27 @@ footer {
   .pc-arrow { width:38px; height:38px; font-size:1.35rem; background:rgba(13,30,60,.72); top:34%; }
   .pc-prev { left:2px; } .pc-next { right:2px; }
 }
+
+/* ════════════════════════════════
+   AJUSTES MOBILE — carrossel + menu
+════════════════════════════════ */
+@media (max-width:768px){
+  .promo-carousel { padding:2.25rem 0; }
+  .pc-slide { grid-template-columns:1fr; gap:1rem; }
+  .pc-photo img { min-height:0; max-height:190px; }
+  .pc-eyebrow { margin-bottom:.7rem; font-size:.68rem; }
+  .pc-title { font-size:1.3rem; line-height:1.2; margin-bottom:.6rem; }
+  .pc-desc { font-size:.9rem; line-height:1.55; margin-bottom:.9rem; }
+  .pc-meta { margin-bottom:1rem; gap:.35rem; }
+  .pc-meta li { font-size:.85rem; }
+  .promo-carousel .btn { padding:.65rem 1.4rem; font-size:.8rem; }
+  .pc-dots { margin-top:1.1rem; }
+  .pc-arrow { width:34px; height:34px; font-size:1.2rem; top:95px; background:rgba(13,30,60,.72); }
+  .pc-prev { left:2px; } .pc-next { right:2px; }
+}
+/* Menu mobile (dropdown) em nav escuro — corrige a "tela em branco" */
+@media (max-width:860px){
+  #main-nav .nav-links { background:#0d1e3c; border-bottom:none; box-shadow:0 10px 24px rgba(0,0,0,.28); }
+  #main-nav .nav-links a { color:#fff; }
+  #main-nav .nav-links .nav-cta { color:#fff !important; }
+}
