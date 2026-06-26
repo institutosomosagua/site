@@ -7,9 +7,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    body { padding-top: 0; }
+    #main-nav { background:#0d1e3c !important; border-bottom:none !important; }
+    #main-nav .nav-logo { color:white; }
+    #main-nav .nav-links a { color:rgba(255,255,255,.8); }
+    #main-nav .nav-links a:hover, #main-nav .nav-links a.active { color:white; }
+    #main-nav .nav-cta { color:white !important; border-color:rgba(255,255,255,.4); }
+    #main-nav .hamburger span { background:white; }
+    .pc-title em { font-style:italic; color:#a8dfe8; }
 
-    /* ── HERO ── */
+    /* ── HERO (legado, não usado) ── */
     .manifesto-hero {
       position: relative;
       height: 100vh; min-height: 560px;
@@ -210,56 +216,95 @@
 </head>
 <body>
 
-<!-- ══ HERO FULL-SCREEN ══ -->
-<section class="manifesto-hero">
-  <div class="manifesto-hero-bg"></div>
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo" style="padding:0;line-height:0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 68" height="42" style="display:block;"><defs><radialGradient id="dg" cx="38%" cy="28%" r="65%"><stop offset="0%" stop-color="#9AE8F8"/><stop offset="45%" stop-color="#1BBDD8"/><stop offset="100%" stop-color="#0A7A96"/></radialGradient></defs><ellipse cx="33" cy="59" rx="24" ry="4.5" stroke="#1BBAD6" stroke-width="1.0" fill="none" opacity="0.38"/><ellipse cx="33" cy="59" rx="15" ry="3" stroke="#1BBAD6" stroke-width="1.2" fill="none" opacity="0.58"/><ellipse cx="33" cy="59" rx="8" ry="1.8" stroke="#1BBAD6" stroke-width="1.5" fill="none" opacity="0.82"/><path d="M33 5 C33 5 14 29 14 43 C14 53.8 22.6 60 33 60 C43.4 60 52 53.8 52 43 C52 29 33 5 33 5Z" fill="url(#dg)"/><ellipse cx="25" cy="28" rx="3.5" ry="8" fill="white" opacity="0.3" transform="rotate(-20 25 28)"/><text x="64" y="38" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="400" font-style="italic" fill="white" letter-spacing="0.5">Somos Água</text><text x="67" y="56" font-family="Inter, sans-serif" font-size="9.5" font-weight="300" fill="rgba(255,255,255,0.58)" letter-spacing="6">INSTITUTO</text></svg></a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="certificacao.html">Certificação</a></li>
+    <li><a href="resultados.html">Resultados</a></li>
+    <li><a href="educacao.html">Educação</a></li>
+    <li><a href="proximos.html">Próximos Passos</a></li>
+    <li><a href="index.html#contato" class="nav-cta">Contato</a></li>
+  </ul>
+</nav>
 
-  <nav class="hero-nav" id="main-nav">
-    <a href="index.html" class="nav-logo" style="padding:0;line-height:0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 68" height="42" style="display:block;"><defs><radialGradient id="dg" cx="38%" cy="28%" r="65%"><stop offset="0%" stop-color="#9AE8F8"/><stop offset="45%" stop-color="#1BBDD8"/><stop offset="100%" stop-color="#0A7A96"/></radialGradient></defs><ellipse cx="33" cy="59" rx="24" ry="4.5" stroke="#1BBAD6" stroke-width="1.0" fill="none" opacity="0.38"/><ellipse cx="33" cy="59" rx="15" ry="3" stroke="#1BBAD6" stroke-width="1.2" fill="none" opacity="0.58"/><ellipse cx="33" cy="59" rx="8" ry="1.8" stroke="#1BBAD6" stroke-width="1.5" fill="none" opacity="0.82"/><path d="M33 5 C33 5 14 29 14 43 C14 53.8 22.6 60 33 60 C43.4 60 52 53.8 52 43 C52 29 33 5 33 5Z" fill="url(#dg)"/><ellipse cx="25" cy="28" rx="3.5" ry="8" fill="white" opacity="0.3" transform="rotate(-20 25 28)"/><text x="64" y="38" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="400" font-style="italic" fill="white" letter-spacing="0.5">Somos Água</text><text x="67" y="56" font-family="Inter, sans-serif" font-size="9.5" font-weight="300" fill="rgba(255,255,255,0.58)" letter-spacing="6">INSTITUTO</text></svg></a>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="certificacao.html">Certificação</a></li>
-      <li><a href="resultados.html">Resultados</a></li>
-      <li><a href="educacao.html">Educação</a></li>
-      <li><a href="proximos.html">Próximos Passos</a></li>
-      <li><a href="index.html#contato" class="nav-cta">Contato</a></li>
-    </ul>
-  </nav>
-
-  <div class="manifesto-hero-content">
-    <span class="eyebrow-light">Instituto Somos Água</span>
-    <h1>Nós somos <em>Água</em>.<br/>E a Água somos nós.</h1>
-  </div>
-
-  <div class="scroll-hint">Rolar para ver nosso manifesto</div>
-</section>
-
-<!-- ══ EVENTO ══ -->
-<section class="event-banner">
+<!-- ══ CARROSSEL DE DESTAQUES ══ -->
+<section class="promo-carousel" id="destaques">
   <div class="container">
-    <div class="event-inner">
-      <div class="event-photo">
-        <img src="imgs/satish-kumar.jpg" alt="Satish Kumar"/>
+    <div class="pc-wrap">
+      <div class="pc-viewport">
+        <div class="pc-track" id="pcTrack">
+
+          <article class="pc-slide">
+            <div class="pc-photo"><img src="imgs/foz.jpg" alt="Rio Piracanga encontrando o mar"/></div>
+            <div class="pc-text">
+              <span class="pc-eyebrow">Instituto Somos Água · Manifesto</span>
+              <h2 class="pc-title">Nós somos <em>Água</em>.<br/>E a Água somos nós.</h2>
+              <p class="pc-desc">Em nossos corpos, territórios, decisões e futuros — a Água nos constitui e nos une.</p>
+              <a href="#manifesto" class="btn btn-water">Rolar para ver nosso manifesto</a>
+            </div>
+          </article>
+
+          <article class="pc-slide">
+            <div class="pc-photo"><img src="imgs/satish-kumar.jpg" alt="Satish Kumar"/></div>
+            <div class="pc-text">
+              <span class="pc-eyebrow">Convite especial · Instituto Somos Água + Florescentia</span>
+              <h2 class="pc-title">Masterclass MAGNA — Regeneração e Liderança Integral</h2>
+              <p class="pc-desc">Com <strong>Satish Kumar</strong> — peregrino da paz e uma das maiores referências mundiais em ecologia e liderança consciente. Um convite para aprofundar interdependência, cuidado e regeneração.</p>
+              <ul class="pc-meta">
+                <li>15 de julho de 2026, às 8h (horário de Brasília)</li>
+                <li>Online, ao vivo, com tradução simultânea</li>
+                <li>Inscrição gratuita</li>
+              </ul>
+              <a href="https://www.florescentia.com.br/masterclass-satish" target="_blank" rel="noopener" class="btn btn-water">Inscreva-se gratuitamente</a>
+            </div>
+          </article>
+
+          <article class="pc-slide">
+            <div class="pc-photo"><img src="imgs/casas.jpg" alt="Casas da Ecovila Piracanga"/></div>
+            <div class="pc-text">
+              <span class="pc-eyebrow">Certificação Participativa</span>
+              <h2 class="pc-title">Veja as casas e estabelecimentos participantes</h2>
+              <p class="pc-desc">Conheça quem já aderiu à Certificação Participativa de Cuidado das Águas na Ecovila Piracanga.</p>
+              <a href="certificacao.html#casas" class="btn btn-water">Ver participantes</a>
+            </div>
+          </article>
+
+          <article class="pc-slide">
+            <div class="pc-photo"><img src="imgs/ecovila.jpg" alt="Vista aérea da Ecovila Piracanga"/></div>
+            <div class="pc-text">
+              <span class="pc-eyebrow">Impacto em Piracanga</span>
+              <h2 class="pc-title">Resultados da nossa ação em Piracanga</h2>
+              <p class="pc-desc">Do primeiro ciclo de certificação à contaminação por E. coli zerada em 2025. Veja os números do nosso trabalho.</p>
+              <a href="resultados.html" class="btn btn-water">Ver resultados</a>
+            </div>
+          </article>
+
+          <article class="pc-slide">
+            <div class="pc-photo"><img src="imgs/rio-top.jpg" alt="Rio Piracanga"/></div>
+            <div class="pc-text">
+              <span class="pc-eyebrow">Próximos eventos</span>
+              <h2 class="pc-title">Apresentação do Relatório de Impacto 25/26</h2>
+              <p class="pc-desc">Um encontro aberto para compartilhar os resultados e os caminhos do Instituto Somos Água.</p>
+              <ul class="pc-meta">
+                <li>25 de julho de 2026 · sábado</li>
+              </ul>
+              <a href="relatorio-impacto.html" class="btn btn-water">Quero participar</a>
+            </div>
+          </article>
+
+        </div>
       </div>
-      <div class="event-text">
-        <span class="event-eyebrow">Convite especial · Instituto Somos Água + Florescentia</span>
-        <h2>Masterclass MAGNA — Regeneração e Liderança Integral</h2>
-        <p class="event-lead">Um convite para aprofundar nossa compreensão sobre interdependência, cuidado e regeneração — valores que também inspiram o trabalho do Instituto Somos Água na construção de uma Cultura de Cuidado das Águas.</p>
-        <p class="event-bio">Com <strong>Satish Kumar</strong> — peregrino da paz, ex-monge e uma das maiores referências mundiais em ecologia e liderança consciente. Aos mais de 80 anos, cofundou a Schumacher College, na Inglaterra — referência mundial em educação ecológica —, fundou o The Resurgence Trust e editou a revista Resurgence &amp; Ecologist por mais de 40 anos. Uma oportunidade rara de trazer essa sabedoria para a nossa rede.</p>
-        <ul class="event-meta">
-          <li>15 de julho de 2026, às 8h (horário de Brasília)</li>
-          <li>Online, ao vivo, com tradução simultânea</li>
-          <li>Inscrição gratuita</li>
-        </ul>
-        <a href="https://www.florescentia.com.br/masterclass-satish" target="_blank" rel="noopener" class="btn btn-water">Inscreva-se gratuitamente</a>
-      </div>
+      <button class="pc-arrow pc-prev" id="pcPrev" aria-label="Destaque anterior">&#8249;</button>
+      <button class="pc-arrow pc-next" id="pcNext" aria-label="Próximo destaque">&#8250;</button>
+      <div class="pc-dots" id="pcDots"></div>
     </div>
   </div>
 </section>
 
 <!-- ══ OPENING ══ -->
-<section class="manifesto-opening">
+<section class="manifesto-opening" id="manifesto" style="scroll-margin-top:64px;">
   <div class="container">
     <p>Em nossos corpos, territórios, decisões e futuros — a Água nos constitui e nos une. O Instituto Somos Água existe para lembrar a humanidade que a realidade se transforma quando a consciência muda. Quando o olhar se expande, o cuidado emerge naturalmente. Quando a intenção é coerente, a matéria responde.</p>
   </div>
@@ -393,6 +438,34 @@
   const hb = document.getElementById('hamburger');
   const nl = document.getElementById('nav-links');
   hb.addEventListener('click', () => nl.classList.toggle('open'));
+
+  (function(){
+    const track = document.getElementById('pcTrack');
+    if(!track) return;
+    const count = track.children.length;
+    const dotsWrap = document.getElementById('pcDots');
+    let i = 0, timer;
+    for(let d=0; d<count; d++){
+      const b = document.createElement('button');
+      b.setAttribute('aria-label','Ir para destaque '+(d+1));
+      b.addEventListener('click', () => { go(d); reset(); });
+      dotsWrap.appendChild(b);
+    }
+    const dots = dotsWrap.children;
+    function render(){
+      track.style.transform = 'translateX(' + (-i*100) + '%)';
+      for(let k=0; k<dots.length; k++) dots[k].classList.toggle('active', k===i);
+    }
+    function go(n){ i = (n+count)%count; render(); }
+    document.getElementById('pcPrev').addEventListener('click', () => { go(i-1); reset(); });
+    document.getElementById('pcNext').addEventListener('click', () => { go(i+1); reset(); });
+    function start(){ timer = setInterval(() => go(i+1), 7000); }
+    function reset(){ clearInterval(timer); start(); }
+    const wrap = track.closest('.pc-wrap');
+    wrap.addEventListener('mouseenter', () => clearInterval(timer));
+    wrap.addEventListener('mouseleave', start);
+    render(); start();
+  })();
 </script>
 </body>
 </html>
