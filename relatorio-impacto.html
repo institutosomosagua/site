@@ -2,36 +2,44 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Relatório de Impacto 25/26 — Instituto Somos Água</title>
+  <title>Encontro Regional pelas Águas e Mudanças Climáticas — Instituto Somos Água</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
     #main-nav { background:#0d1e3c !important; border-bottom:none !important; }
     #main-nav .nav-logo { color:white; }
     #main-nav .nav-links a { color:rgba(255,255,255,.8); }
-    #main-nav .nav-links a:hover, #main-nav .nav-links a.active { color:white; border-bottom-color:rgba(255,255,255,.5); }
+    #main-nav .nav-links a:hover, #main-nav .nav-links a.active { color:white; }
     #main-nav .nav-cta { color:white !important; border-color:rgba(255,255,255,.4); }
     #main-nav .hamburger span { background:white; }
-    .ev-hero { position:relative; min-height:58vh; display:flex; align-items:center; overflow:hidden; }
+    .ev-hero { position:relative; min-height:60vh; display:flex; align-items:center; overflow:hidden; }
     .ev-hero-bg { position:absolute; inset:0; background:url('imgs/ecovila.jpg') center/cover no-repeat; }
-    .ev-hero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg, rgba(13,30,60,.9), rgba(13,30,60,.55)); }
+    .ev-hero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg, rgba(13,30,60,.92), rgba(13,30,60,.55)); }
     .ev-hero .container { position:relative; z-index:2; }
-    .ev-hero-content { max-width:660px; padding:3.5rem 0; }
+    .ev-hero-content { max-width:700px; padding:3.5rem 0; }
     .ev-eyebrow { display:block; font-size:.72rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#a8dfe8; margin-bottom:1.1rem; }
-    .ev-hero-content h1 { color:#fff; font-size:clamp(2rem,4.5vw,3.2rem); line-height:1.15; margin-bottom:1.1rem; }
-    .ev-hero-content p { color:rgba(255,255,255,.85); font-size:1.08rem; line-height:1.7; max-width:560px; margin-bottom:2rem; }
+    .ev-hero-content h1 { color:#fff; font-size:clamp(1.9rem,4.2vw,3rem); line-height:1.15; margin-bottom:1.1rem; }
+    .ev-hero-content p { color:rgba(255,255,255,.85); font-size:1.08rem; line-height:1.7; max-width:580px; margin-bottom:2rem; }
     .btn-water { background:#2E8B9A; color:#fff; }
     .btn-water:hover { background:#35a2b5; }
     .ev-facts .card-box { text-align:left; }
-    .ev-facts h3 { font-size:1.15rem; margin:.4rem 0 .15rem; }
+    .ev-facts h3 { font-size:1.1rem; margin:.4rem 0 .15rem; }
+    .agenda { max-width:700px; margin-top:1.5rem; }
+    .ag-item { display:flex; gap:1.4rem; padding:1.05rem 0; border-top:1px solid var(--border); }
+    .ag-item:last-child { border-bottom:1px solid var(--border); }
+    .ag-time { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--water); font-weight:700; min-width:62px; flex-shrink:0; padding-top:.1rem; }
+    .ag-body h3 { font-size:.97rem; margin-bottom:.2rem; }
+    .ag-body p { font-size:.88rem; }
+    .guests { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.5rem; }
+    .guest { padding:.5rem .95rem; border:1px solid var(--border); border-radius:3px; font-size:.85rem; color:var(--ink-soft); background:var(--white); }
     .ev-cta { background:#0d1e3c; color:#fff; text-align:center; }
     .ev-cta h2 { color:#fff; }
     .ev-cta p { color:rgba(255,255,255,.8); }
   </style>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Instituto Somos Água"/>
-  <meta property="og:title" content="Apresentação do Relatório de Impacto 25/26 — Instituto Somos Água"/>
-  <meta property="og:description" content="Evento presencial na Ecovila Piracanga, Maraú-BA. 25 de julho de 2026, das 8h às 12h."/>
+  <meta property="og:title" content="Encontro Regional pelas Águas e Mudanças Climáticas — Instituto Somos Água"/>
+  <meta property="og:description" content="25 de julho de 2026, na Ecovila Piracanga (Maraú-BA). Um encontro de diálogo e construção coletiva pela resiliência climática do Sul da Bahia, com a apresentação do Relatório de Impacto do Instituto Somos Água."/>
   <meta property="og:image" content="https://institutosomosagua.github.io/site/imgs/og-image.png"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
@@ -52,25 +60,23 @@
     <li><a href="index.html#contato" class="nav-cta">Contato</a></li>
   </ul>
 </nav>
-<!-- HERO -->
 <section class="ev-hero">
   <div class="ev-hero-bg"></div>
   <div class="container">
     <div class="ev-hero-content">
-      <span class="ev-eyebrow">Evento presencial · Ecovila Piracanga</span>
-      <h1>Apresentação do<br/>Relatório de Impacto 25/26</h1>
-      <p>Um encontro aberto para celebrar e compartilhar os resultados do Instituto Somos Água no cuidado das Águas de Piracanga.</p>
+      <span class="ev-eyebrow">Evento presencial · Ecovila Piracanga · 25 de julho de 2026</span>
+      <h1>Encontro Regional pelas Águas e Mudanças Climáticas</h1>
+      <p>Um dia de diálogo, troca de experiências e construção de caminhos conjuntos para a resiliência climática do Sul da Bahia.</p>
       <a href="https://form.typeform.com/to/ejhv4TsZ" target="_blank" rel="noopener" class="btn btn-water">Inscreva-se</a>
     </div>
   </div>
 </section>
 
-<!-- FATOS -->
 <section class="tight">
   <div class="container">
     <div class="grid-3 ev-facts">
       <div class="card-box"><span class="eyebrow">Data</span><h3>25 de julho de 2026</h3><p style="font-size:.9rem;">Sábado</p></div>
-      <div class="card-box"><span class="eyebrow">Horário</span><h3>Das 8h às 12h</h3><p style="font-size:.9rem;">Horário de Brasília</p></div>
+      <div class="card-box"><span class="eyebrow">Horário</span><h3>A partir das 10h</h3><p style="font-size:.9rem;">Programação até a tarde</p></div>
       <div class="card-box"><span class="eyebrow">Local</span><h3>Ecovila Piracanga</h3><p style="font-size:.9rem;">Maraú — BA</p></div>
     </div>
   </div>
@@ -78,36 +84,67 @@
 
 <div class="divider"></div>
 
-<!-- DESCRIÇÃO -->
 <section>
   <div class="container" style="max-width:760px;">
-    <span class="eyebrow">O Encontro</span>
-    <h2>Um encontro para compartilhar o que construímos juntos</h2>
-    <p>O Instituto Somos Água convida a comunidade de Piracanga e todos os interessados para a apresentação do seu Relatório de Impacto 2025/26 — um momento de prestação de contas, celebração e diálogo sobre o cuidado coletivo das Águas.</p>
-    <p>Será uma manhã para conhecer de perto os resultados do trabalho na Ecovila Piracanga, ouvir os aprendizados do ciclo e pensar juntos os próximos passos da Certificação Participativa de Cuidado das Águas.</p>
+    <span class="eyebrow">O Convite</span>
+    <h2>Diante das mudanças climáticas, ninguém age sozinho</h2>
+    <p>O Instituto Somos Água convida organizações da sociedade civil, coletivos, associações comunitárias, universidades, povos tradicionais, agricultores, educadores e lideranças do Sul da Bahia para um encontro dedicado ao diálogo, à troca de experiências e à construção de caminhos conjuntos diante dos desafios climáticos que já impactam nossa região.</p>
+    <p>O encontro também será uma oportunidade para apresentar os resultados e aprendizados do Relatório de Impacto da Certificação Participativa de Cuidado das Águas, colocando essa trajetória a serviço de uma articulação regional mais ampla.</p>
+    <div class="inline-quote">Nosso desejo não é apenas apresentar um relatório, mas abrir uma conversa: ouvir quem já atua no território, reconhecer iniciativas inspiradoras e iniciar uma agenda colaborativa voltada à adaptação climática, à segurança hídrica e à regeneração dos nossos territórios.</div>
+    <p>Acreditamos que cuidar das Águas é um caminho para fortalecer a saúde das pessoas, das comunidades e dos ecossistemas.</p>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- DESTAQUES -->
-<section class="tight">
+<section>
   <div class="container">
-    <span class="eyebrow">No relatório</span>
-    <h2>Alguns destaques que vamos apresentar</h2>
-    <div class="grid-3" style="margin-top:2rem;">
-      <div class="card-box"><h3>Águas mais limpas</h3><p style="font-size:.88rem;">A trajetória da contaminação por E. coli — de 74% em 2019 a zero em 2025.</p></div>
-      <div class="card-box"><h3>Casas participantes</h3><p style="font-size:.88rem;">As casas e estabelecimentos que aderiram à Certificação Participativa.</p></div>
-      <div class="card-box"><h3>Próximos passos</h3><p style="font-size:.88rem;">Os caminhos do Instituto para os próximos ciclos de cuidado das Águas.</p></div>
+    <span class="eyebrow">Programação</span>
+    <h2>Como será o nosso dia</h2>
+    <div class="agenda">
+      <div class="ag-item"><span class="ag-time">10h00</span><div class="ag-body"><h3>Visita guiada em Piracanga</h3><p>Conhecendo a Ecovila · banho de rio e mar.</p></div></div>
+      <div class="ag-item"><span class="ag-time">12h30</span><div class="ag-body"><h3>Almoço</h3></div></div>
+      <div class="ag-item"><span class="ag-time">14h00</span><div class="ag-body"><h3>Boas-vindas e abertura</h3><p>Apresentação dos participantes, propósito do encontro e acordos de convivência.</p></div></div>
+      <div class="ag-item"><span class="ag-time">14h15</span><div class="ag-body"><h3>Relatório de Impacto do Instituto Somos Água</h3><p>Resultados, aprendizados e desafios: certificação, educação para o cuidado das Águas, regeneração territorial, redes e perspectivas futuras.</p></div></div>
+      <div class="ag-item"><span class="ag-time">14h45</span><div class="ag-body"><h3>Cenário climático regional</h3><p>Mudanças climáticas no Sul da Bahia, segurança hídrica e eventos extremos.</p></div></div>
+      <div class="ag-item"><span class="ag-time">15h05</span><div class="ag-body"><h3>Vozes do Território</h3><p>Roda de diálogo: cada organização compartilha quem é, como o clima já impacta seu território e que soluções desenvolve.</p></div></div>
+      <div class="ag-item"><span class="ag-time">16h05</span><div class="ag-body"><h3>Construção coletiva</h3><p>Quais ações precisamos construir nos próximos dois anos para fortalecer a resiliência climática do território?</p></div></div>
+      <div class="ag-item"><span class="ag-time">16h45</span><div class="ag-body"><h3>Próximos passos</h3><p>Encaminhamentos para uma Rede Regional de Resiliência Climática.</p></div></div>
+      <div class="ag-item"><span class="ag-time">—</span><div class="ag-body"><h3>Encerramento</h3><p>Uma roda final: o que levamos deste encontro para fortalecer nosso território?</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<div class="divider"></div>
+
+<section class="tight">
+  <div class="container">
+    <span class="eyebrow">Organizações convidadas</span>
+    <h2>Quem estamos reunindo</h2>
+    <p style="max-width:560px;">Organizações, instituições e redes que atuam pelo território e pelo clima no Sul da Bahia.</p>
+    <div class="guests">
+      <span class="guest">Floresta Viva</span>
+      <span class="guest">Instituto Etno</span>
+      <span class="guest">Mecenas da Vida</span>
+      <span class="guest">ERA – Escola de Ativismo Rural</span>
+      <span class="guest">Observatório Social</span>
+      <span class="guest">Costa Sustentável</span>
+      <span class="guest">Instituto Yande</span>
+      <span class="guest">ETIV</span>
+      <span class="guest">Instituto Arapyaú</span>
+      <span class="guest">Taboa</span>
+      <span class="guest">Aldeia Tukum</span>
+      <span class="guest">UESC</span>
+      <span class="guest">UFSB</span>
+      <span class="guest">INEMA</span>
+    </div>
+  </div>
+</section>
+
 <section class="ev-cta">
   <div class="container">
-    <h2>Participe presencialmente</h2>
-    <p style="max-width:480px;margin:0 auto 2rem;">Garanta sua presença neste encontro na Ecovila Piracanga.</p>
+    <h2>Participe deste encontro</h2>
+    <p style="max-width:500px;margin:0 auto 2rem;">Vagas limitadas. Inscreva-se para somar sua voz à construção de uma rede regional pelo cuidado das Águas.</p>
     <a href="https://form.typeform.com/to/ejhv4TsZ" target="_blank" rel="noopener" class="btn btn-water">Inscreva-se</a>
   </div>
 </section>
