@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Encontro Regional pelas Águas e Mudanças Climáticas — Instituto Somos Água</title>
+  <title>Apoie — Instituto Somos Água</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
@@ -12,34 +12,35 @@
     #main-nav .nav-links a:hover, #main-nav .nav-links a.active { color:white; }
     #main-nav .nav-cta { color:white !important; border-color:rgba(255,255,255,.4); }
     #main-nav .hamburger span { background:white; }
-    .ev-hero { position:relative; min-height:60vh; display:flex; align-items:center; overflow:hidden; }
-    .ev-hero-bg { position:absolute; inset:0; background:url('imgs/ecovila.jpg') center/cover no-repeat; }
-    .ev-hero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg, rgba(13,30,60,.92), rgba(13,30,60,.55)); }
+    .ev-hero { position:relative; min-height:48vh; display:flex; align-items:center; overflow:hidden; }
+    .ev-hero-bg { position:absolute; inset:0; background:url('imgs/foz.jpg') center/cover no-repeat; }
+    .ev-hero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg, rgba(13,30,60,.9), rgba(13,30,60,.5)); }
     .ev-hero .container { position:relative; z-index:2; }
-    .ev-hero-content { max-width:700px; padding:3.5rem 0; }
+    .ev-hero-content { max-width:660px; padding:3rem 0; }
     .ev-eyebrow { display:block; font-size:.72rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#a8dfe8; margin-bottom:1.1rem; }
-    .ev-hero-content h1 { color:#fff; font-size:clamp(1.9rem,4.2vw,3rem); line-height:1.15; margin-bottom:1.1rem; }
-    .ev-hero-content p { color:rgba(255,255,255,.85); font-size:1.08rem; line-height:1.7; max-width:580px; margin-bottom:2rem; }
+    .ev-hero-content h1 { color:#fff; font-size:clamp(2rem,4.5vw,3rem); line-height:1.15; margin-bottom:1.1rem; }
+    .ev-hero-content p { color:rgba(255,255,255,.85); font-size:1.06rem; line-height:1.7; max-width:560px; margin:0; }
     .btn-water { background:#2E8B9A; color:#fff; }
     .btn-water:hover { background:#35a2b5; }
-    .ev-facts .card-box { text-align:left; }
-    .ev-facts h3 { font-size:1.1rem; margin:.4rem 0 .15rem; }
-    .agenda { max-width:700px; margin-top:1.5rem; }
-    .ag-item { display:flex; gap:1.4rem; padding:1.05rem 0; border-top:1px solid var(--border); }
-    .ag-item:last-child { border-bottom:1px solid var(--border); }
-    .ag-time { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--water); font-weight:700; min-width:62px; flex-shrink:0; padding-top:.1rem; }
-    .ag-body h3 { font-size:.97rem; margin-bottom:.2rem; }
-    .ag-body p { font-size:.88rem; }
-    .guests { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.5rem; }
-    .guest { padding:.5rem .95rem; border:1px solid var(--border); border-radius:3px; font-size:.85rem; color:var(--ink-soft); background:var(--white); }
-    .ev-cta { background:#0d1e3c; color:#fff; text-align:center; }
-    .ev-cta h2 { color:#fff; }
-    .ev-cta p { color:rgba(255,255,255,.8); }
+    .give-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:2rem; }
+    .give-card { border:1px solid var(--border); border-radius:4px; padding:2rem; background:var(--white); }
+    .give-card h3 { font-size:1.1rem; margin-bottom:.5rem; }
+    .give-card p { font-size:.9rem; }
+    .pix-key { display:flex; align-items:center; gap:.6rem; background:var(--off-white); border:1px solid var(--border); border-radius:3px; padding:.7rem .85rem; margin:1.1rem 0; }
+    .pix-key code { font-family:'SFMono-Regular',Menlo,monospace; font-size:.92rem; color:var(--ink); flex:1; word-break:break-all; }
+    .pix-key button { border:1px solid var(--water); background:#fff; color:var(--water); font-size:.78rem; font-weight:600; padding:.35rem .7rem; border-radius:3px; cursor:pointer; white-space:nowrap; transition:all .15s; }
+    .pix-key button:hover { background:var(--water); color:#fff; }
+    .qr { margin-top:1rem; }
+    .qr img { width:170px; height:170px; object-fit:contain; border:1px solid var(--border); padding:6px; background:#fff; }
+    .placeholder { background:#FFF6E5; border:1px dashed #E0B85C; color:#8a6d1f; padding:.4rem .6rem; border-radius:3px; font-size:.82rem; display:inline-block; }
+    .give-cta { background:#0d1e3c; color:#fff; text-align:center; }
+    .give-cta h2 { color:#fff; } .give-cta p { color:rgba(255,255,255,.8); }
+    @media (max-width:700px){ .give-grid { grid-template-columns:1fr; } }
   </style>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Instituto Somos Água"/>
-  <meta property="og:title" content="Encontro Regional pelas Águas e Mudanças Climáticas — Instituto Somos Água"/>
-  <meta property="og:description" content="25 de julho de 2026, na Ecovila Piracanga (Maraú-BA). Um encontro de diálogo e construção coletiva pela resiliência climática do Sul da Bahia, com a apresentação do Relatório de Impacto do Instituto Somos Água."/>
+  <meta property="og:title" content="Apoie — Instituto Somos Água"/>
+  <meta property="og:description" content="Apoie o cuidado das Águas. Sua contribuição sustenta a Certificação Participativa de Cuidado das Águas, a educação e a regeneração dos territórios de Piracanga."/>
   <meta property="og:image" content="https://institutosomosagua.github.io/site/imgs/og-image.png"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
@@ -57,7 +58,7 @@
     <li><a href="resultados.html">Resultados</a></li>
     <li><a href="educacao.html">Educação</a></li>
     <li><a href="proximos.html">Próximos Passos</a></li>
-    <li><a href="apoie.html">Apoie</a></li>
+    <li><a href="apoie.html" class="active">Apoie</a></li>
     <li><a href="index.html#contato" class="nav-cta">Contato</a></li>
   </ul>
 </nav>
@@ -65,20 +66,39 @@
   <div class="ev-hero-bg"></div>
   <div class="container">
     <div class="ev-hero-content">
-      <span class="ev-eyebrow">Evento presencial · Ecovila Piracanga · 25 de julho de 2026</span>
-      <h1>Encontro Regional pelas Águas e Mudanças Climáticas</h1>
-      <p>Um dia de diálogo, troca de experiências e construção de caminhos conjuntos para a resiliência climática do Sul da Bahia.</p>
-      <a href="https://form.typeform.com/to/ejhv4TsZ" target="_blank" rel="noopener" class="btn btn-water">Inscreva-se</a>
+      <span class="ev-eyebrow">Apoie</span>
+      <h1>Apoie o cuidado das Águas</h1>
+      <p>O Instituto Somos Água é sustentado por pessoas que acreditam que cuidar das Águas é cuidar da vida. Sua contribuição mantém viva essa rede de cuidado coletivo.</p>
     </div>
   </div>
 </section>
 
-<section class="tight">
+<section id="como-apoiar">
   <div class="container">
-    <div class="grid-3 ev-facts">
-      <div class="card-box"><span class="eyebrow">Data</span><h3>25 de julho de 2026</h3><p style="font-size:.9rem;">Sábado</p></div>
-      <div class="card-box"><span class="eyebrow">Horário</span><h3>A partir das 10h</h3><p style="font-size:.9rem;">Programação até a tarde</p></div>
-      <div class="card-box"><span class="eyebrow">Local</span><h3>Ecovila Piracanga</h3><p style="font-size:.9rem;">Maraú — BA</p></div>
+    <span class="eyebrow">Como apoiar</span>
+    <h2>Escolha a melhor forma para você</h2>
+    <div class="give-grid">
+      <div class="give-card">
+        <h3>Doe via PIX</h3>
+        <p>Escaneie o QR Code no app do seu banco ou copie uma das chaves abaixo.</p>
+        <div class="qr"><img src="imgs/pix-qr.png" alt="QR Code PIX — Associação Somos Água"/></div>
+        <div class="pix-key">
+          <code id="pixkey">agua.certificacao@gmail.com</code>
+          <button onclick="copyPix('pixkey', this)">Copiar</button>
+        </div>
+        <p style="font-size:.82rem;color:var(--ink-muted);">Chave PIX (e-mail) · Associação Somos Água</p>
+        <div class="pix-key">
+          <code id="pixcode">18f6b223-e1dd-4fc1-9495-3b3dccbc6b68</code>
+          <button onclick="copyPix('pixcode', this)">Copiar</button>
+        </div>
+        <p style="font-size:.82rem;color:var(--ink-muted);">Chave aleatória (alternativa)</p>
+      </div>
+      <div class="give-card">
+        <h3>Fundo Filantrópico na Sitawi</h3>
+        <p>Doe com cartão de crédito, de forma pontual ou recorrente, pelo Fundo Filantrópico Somos Água, gerido pela Sitawi.</p>
+        <p style="margin-top:1.1rem;"><a href="https://fundos.sitawi.net/fundo-somos-agua" target="_blank" rel="noopener" class="btn btn-water">Doar pelo Fundo na Sitawi</a></p>
+        <p style="font-size:.82rem;color:var(--ink-muted);margin-top:1rem;">Plataforma: Sitawi Finanças do Bem</p>
+      </div>
     </div>
   </div>
 </section>
@@ -87,66 +107,37 @@
 
 <section>
   <div class="container" style="max-width:760px;">
-    <span class="eyebrow">O Convite</span>
-    <h2>Diante das mudanças climáticas, ninguém age sozinho</h2>
-    <p>O Instituto Somos Água convida organizações da sociedade civil, coletivos, associações comunitárias, universidades, povos tradicionais, agricultores, educadores e lideranças do Sul da Bahia para um encontro dedicado ao diálogo, à troca de experiências e à construção de caminhos conjuntos diante dos desafios climáticos que já impactam nossa região.</p>
-    <p>O encontro também será uma oportunidade para apresentar os resultados e aprendizados do Relatório de Impacto da Certificação Participativa de Cuidado das Águas, colocando essa trajetória a serviço de uma articulação regional mais ampla.</p>
-    <div class="inline-quote">Nosso desejo não é apenas apresentar um relatório, mas abrir uma conversa: ouvir quem já atua no território, reconhecer iniciativas inspiradoras e iniciar uma agenda colaborativa voltada à adaptação climática, à segurança hídrica e à regeneração dos nossos territórios.</div>
-    <p>Acreditamos que cuidar das Águas é um caminho para fortalecer a saúde das pessoas, das comunidades e dos ecossistemas.</p>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <div class="container">
-    <span class="eyebrow">Programação</span>
-    <h2>Como será o nosso dia</h2>
-    <div class="agenda">
-      <div class="ag-item"><span class="ag-time">10h00</span><div class="ag-body"><h3>Visita guiada em Piracanga</h3><p>Conhecendo a Ecovila · banho de rio e mar.</p></div></div>
-      <div class="ag-item"><span class="ag-time">12h30</span><div class="ag-body"><h3>Almoço</h3></div></div>
-      <div class="ag-item"><span class="ag-time">14h00</span><div class="ag-body"><h3>Boas-vindas e abertura</h3><p>Apresentação dos participantes, propósito do encontro e acordos de convivência.</p></div></div>
-      <div class="ag-item"><span class="ag-time">14h15</span><div class="ag-body"><h3>Relatório de Impacto do Instituto Somos Água</h3><p>Resultados, aprendizados e desafios: certificação, educação para o cuidado das Águas, regeneração territorial, redes e perspectivas futuras.</p></div></div>
-      <div class="ag-item"><span class="ag-time">14h45</span><div class="ag-body"><h3>Cenário climático regional</h3><p>Mudanças climáticas no Sul da Bahia, segurança hídrica e eventos extremos.</p></div></div>
-      <div class="ag-item"><span class="ag-time">15h05</span><div class="ag-body"><h3>Vozes do Território</h3><p>Roda de diálogo: cada organização compartilha quem é, como o clima já impacta seu território e que soluções desenvolve.</p></div></div>
-      <div class="ag-item"><span class="ag-time">16h05</span><div class="ag-body"><h3>Construção coletiva</h3><p>Quais ações precisamos construir nos próximos dois anos para fortalecer a resiliência climática do território?</p></div></div>
-      <div class="ag-item"><span class="ag-time">16h45</span><div class="ag-body"><h3>Próximos passos</h3><p>Encaminhamentos para uma Rede Regional de Resiliência Climática.</p></div></div>
-      <div class="ag-item"><span class="ag-time">—</span><div class="ag-body"><h3>Encerramento</h3><p>Uma roda final: o que levamos deste encontro para fortalecer nosso território?</p></div></div>
-    </div>
+    <span class="eyebrow">O que o seu apoio sustenta</span>
+    <h2>Cada doação vira cuidado com as Águas</h2>
+    <p>O Instituto Somos Água é mantido por doações de quem acredita no nosso trabalho. Os recursos sustentam as ações que tornam possível a Certificação Participativa de Cuidado das Águas e o cuidado coletivo em Piracanga.</p>
+    <ul class="check-list" style="margin-top:1.5rem;">
+      <li>Análises laboratoriais da água e as visitas de saneamento às casas.</li>
+      <li>Ações de educação e sensibilização — encontros, capacitações e o podcast.</li>
+      <li>A regeneração territorial e a articulação de redes pelo cuidado das Águas.</li>
+      <li>A continuidade e a replicação do projeto para novos territórios.</li>
+    </ul>
   </div>
 </section>
 
 <div class="divider"></div>
 
 <section class="tight">
-  <div class="container">
-    <span class="eyebrow">Organizações convidadas</span>
-    <h2>Quem estamos reunindo</h2>
-    <p style="max-width:560px;">Organizações, instituições e redes que atuam pelo território e pelo clima no Sul da Bahia.</p>
-    <div class="guests">
-      <span class="guest">Floresta Viva</span>
-      <span class="guest">Instituto Etno</span>
-      <span class="guest">Mecenas da Vida</span>
-      <span class="guest">ERA – Escola de Ativismo Rural</span>
-      <span class="guest">Observatório Social</span>
-      <span class="guest">Costa Sustentável</span>
-      <span class="guest">Instituto Yande</span>
-      <span class="guest">ETIV</span>
-      <span class="guest">Instituto Arapyaú</span>
-      <span class="guest">Taboa</span>
-      <span class="guest">Aldeia Tukum</span>
-      <span class="guest">UESC</span>
-      <span class="guest">UFSB</span>
-      <span class="guest">INEMA</span>
-    </div>
+  <div class="container" style="max-width:760px;">
+    <span class="eyebrow">Observações</span>
+    <h2>Boas informações para apoiar</h2>
+    <ul class="check-list" style="margin-top:1.5rem;">
+      <li>Doações pontuais ou recorrentes são igualmente bem-vindas — qualquer valor faz diferença.</li>
+      <li>As doações via PIX são difíceis de monitorar. Se quiser um recibo ou retorno sobre seu apoio, escreva para institutosomosagua@gmail.com.</li>
+      <li>Para parcerias, patrocínios ou doações de organizações, fale com a gente pelo mesmo e-mail.</li>
+    </ul>
   </div>
 </section>
 
-<section class="ev-cta">
+<section class="give-cta">
   <div class="container">
-    <h2>Participe deste encontro</h2>
-    <p style="max-width:500px;margin:0 auto 2rem;">Vagas limitadas. Inscreva-se para somar sua voz à construção de uma rede regional pelo cuidado das Águas.</p>
-    <a href="https://form.typeform.com/to/ejhv4TsZ" target="_blank" rel="noopener" class="btn btn-water">Inscreva-se</a>
+    <h2>Junte-se a quem cuida das Águas</h2>
+    <p style="max-width:480px;margin:0 auto 2rem;">Seu apoio é o que mantém esse movimento fluindo.</p>
+    <a href="#como-apoiar" class="btn btn-water">Quero apoiar</a>
   </div>
 </section>
 <footer>
@@ -170,6 +161,12 @@
     <p class="footer-bottom">Relatório de Impacto 2024/25 · Instituto Somos Água</p>
   </div>
 </footer>
-<script>document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));</script>
+<script>
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));
+  function copyPix(id, btn){
+    const k=document.getElementById(id).innerText;
+    navigator.clipboard.writeText(k).then(()=>{ const t=btn.innerText; btn.innerText='Copiado!'; setTimeout(()=>btn.innerText=t,1800); });
+  }
+</script>
 </body>
 </html>
