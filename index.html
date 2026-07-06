@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Instituto Somos Água</title>
+  <link rel="canonical" href="https://institutosomosagua.org.br/"/>
   <meta name="description" content="Nós somos Água. E a Água somos nós — em nossos corpos, territórios, decisões e futuros."/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
   <style>
     #main-nav { background:#0d1e3c !important; border-bottom:none !important; }
     #main-nav .nav-logo { color:white; }
@@ -14,74 +18,6 @@
     #main-nav .nav-cta { color:white !important; border-color:rgba(255,255,255,.4); }
     #main-nav .hamburger span { background:white; }
     .pc-title em { font-style:italic; color:#a8dfe8; }
-
-    /* ── HERO (legado, não usado) ── */
-    .manifesto-hero {
-      position: relative;
-      height: 100vh; min-height: 560px;
-      display: flex; align-items: center; justify-content: center;
-      text-align: center; overflow: hidden;
-    }
-    .manifesto-hero-bg {
-      position: absolute; inset: 0;
-      background: url('imgs/foz.jpg') center 55% / cover no-repeat;
-    }
-    .manifesto-hero-bg::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: rgba(0,0,0,.50);
-    }
-
-    /* transparent nav over hero */
-    .hero-nav {
-      position: absolute; top: 0; left: 0; right: 0; z-index: 10;
-      background: #0d1e3c;
-      height: 64px;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2.5rem;
-    }
-    .hero-nav .nav-logo { color: white; }
-    .hero-nav .nav-links a { color: rgba(255,255,255,.82); }
-    .hero-nav .nav-links a:hover { color: white; }
-    .hero-nav .nav-cta { color: white !important; border-color: rgba(255,255,255,.45); }
-    .hero-nav .hamburger span { background: white; }
-
-    .manifesto-hero-content {
-      position: relative; z-index: 5;
-      padding: 0 2rem;
-    }
-    .eyebrow-light {
-      font-size: .72rem; font-weight: 600;
-      letter-spacing: .18em; text-transform: uppercase;
-      color: rgba(255,255,255,.6);
-      margin-bottom: 1.75rem; display: block;
-    }
-    .manifesto-hero-content h1 {
-      color: white;
-      font-size: clamp(2.4rem, 5.5vw, 4rem);
-      line-height: 1.18;
-      text-shadow: 0 2px 32px rgba(0,0,0,.25);
-      max-width: 700px;
-      margin: 0 auto 1.75rem;
-    }
-    .manifesto-hero-content h1 em {
-      font-style: italic;
-      color: #a8dfe8;
-    }
-    .scroll-hint {
-      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
-      z-index: 5;
-      color: rgba(255,255,255,.5);
-      font-size: .62rem; letter-spacing: .22em; text-transform: uppercase;
-      display: flex; flex-direction: column; align-items: center; gap: .6rem;
-      white-space: nowrap;
-    }
-    .scroll-hint::after {
-      content: '';
-      width: 1px; height: 40px;
-      background: rgba(255,255,255,.3);
-      display: block;
-    }
 
     /* ── OPENING ── */
     .manifesto-opening {
@@ -196,23 +132,34 @@
     }
 
     @media (max-width: 860px) {
-      .hero-nav { padding: 0 1.25rem; }
       .manifesto-split { grid-template-columns: 1fr; gap: 1.5rem; }
       .manifesto-split-label { position: static; }
     }
   </style>
   <!-- Open Graph / WhatsApp -->
   <meta property="og:type"        content="website"/>
+  <meta property="og:url" content="https://institutosomosagua.org.br/"/>
   <meta property="og:site_name"   content="Instituto Somos Água"/>
   <meta property="og:title"       content="Instituto Somos Água — Manifesto"/>
   <meta property="og:description" content="Nós somos Água. E a Água somos nós. O Instituto Somos Água une ativismo hídrico, educação ecológica e responsabilidade coletiva em Piracanga, Bahia."/>
-  <meta property="og:image"       content="https://institutosomosagua.github.io/site/imgs/og-image.png"/>
+  <meta property="og:image"       content="https://institutosomosagua.org.br/imgs/og-image.png"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height"content="630"/>
   <meta property="og:locale"      content="pt_BR"/>
   <!-- Twitter / X -->
   <meta name="twitter:card"       content="summary_large_image"/>
-  <meta name="twitter:image"      content="https://institutosomosagua.github.io/site/imgs/og-image.png"/>
+  <meta name="twitter:image"      content="https://institutosomosagua.org.br/imgs/og-image.png"/>
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VGXWJZ3L4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5VGXWJZ3L4');
+  </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NGO","name":"Instituto Somos Água","url":"https://institutosomosagua.org.br/","logo":"https://institutosomosagua.org.br/apple-touch-icon.png","email":"institutosomosagua@gmail.com","description":"Instituto Somos Água — Certificação Participativa de Cuidado das Águas na Ecovila Piracanga, Sul da Bahia.","address":{"@type":"PostalAddress","addressLocality":"Maraú","addressRegion":"BA","addressCountry":"BR"},"areaServed":"Sul da Bahia, Brasil","sameAs":["https://www.instagram.com/institutosomosagua/","https://www.linkedin.com/company/instituto-somos-%C3%A1gua/","https://www.youtube.com/@institutosomosagua","https://open.spotify.com/show/7oKQB1N1HVJyOMrPgFYadg"]}
+</script>
 </head>
 <body>
 
@@ -248,7 +195,7 @@
           </article>
 
           <article class="pc-slide">
-            <div class="pc-photo"><img src="imgs/satish-kumar.jpg" alt="Satish Kumar"/></div>
+            <div class="pc-photo"><img loading="lazy" src="imgs/satish-kumar.jpg" alt="Satish Kumar"/></div>
             <div class="pc-text">
               <span class="pc-eyebrow">Convite especial · Instituto Somos Água + Florescentia</span>
               <h2 class="pc-title">Masterclass MAGNA — Regeneração e Liderança Integral</h2>
@@ -263,7 +210,7 @@
           </article>
 
           <article class="pc-slide">
-            <div class="pc-photo"><img src="imgs/casas.jpg" alt="Casas da Ecovila Piracanga"/></div>
+            <div class="pc-photo"><img loading="lazy" src="imgs/casas.jpg" alt="Casas da Ecovila Piracanga"/></div>
             <div class="pc-text">
               <span class="pc-eyebrow">Certificação Participativa de Cuidado das Águas</span>
               <h2 class="pc-title">Veja as casas e estabelecimentos participantes</h2>
@@ -273,7 +220,7 @@
           </article>
 
           <article class="pc-slide">
-            <div class="pc-photo"><img src="imgs/ecovila.jpg" alt="Vista aérea da Ecovila Piracanga"/></div>
+            <div class="pc-photo"><img loading="lazy" src="imgs/ecovila.jpg" alt="Vista aérea da Ecovila Piracanga"/></div>
             <div class="pc-text">
               <span class="pc-eyebrow">Impacto em Piracanga</span>
               <h2 class="pc-title">Resultados da nossa ação em Piracanga</h2>
@@ -283,7 +230,7 @@
           </article>
 
           <article class="pc-slide">
-            <div class="pc-photo"><img src="imgs/rio-top.jpg" alt="Rio Piracanga"/></div>
+            <div class="pc-photo"><img loading="lazy" src="imgs/rio-top.jpg" alt="Rio Piracanga"/></div>
             <div class="pc-text">
               <span class="pc-eyebrow">Próximos eventos</span>
               <h2 class="pc-title">Encontro Regional pelas Águas e Mudanças Climáticas</h2>
@@ -292,12 +239,12 @@
                 <li>25 de julho de 2026 · sábado</li>
                 <li>Ecovila Piracanga · Maraú — BA</li>
               </ul>
-              <a href="relatorio-impacto.html" class="btn btn-water">Quero participar</a>
+              <a href="encontro-regional.html" class="btn btn-water">Quero participar</a>
             </div>
           </article>
 
           <article class="pc-slide">
-            <div class="pc-photo"><img src="imgs/hero.jpg" alt="Rio Piracanga correndo para o mar"/></div>
+            <div class="pc-photo"><img loading="lazy" src="imgs/hero.jpg" alt="Rio Piracanga correndo para o mar"/></div>
             <div class="pc-text">
               <span class="pc-eyebrow">Apoie</span>
               <h2 class="pc-title">Apoie o cuidado das Águas</h2>
@@ -311,6 +258,7 @@
       <button class="pc-arrow pc-prev" id="pcPrev" aria-label="Destaque anterior">&#8249;</button>
       <button class="pc-arrow pc-next" id="pcNext" aria-label="Próximo destaque">&#8250;</button>
       <div class="pc-dots" id="pcDots"></div>
+      <button class="pc-pause" id="pcPause" aria-label="Pausar apresentação automática">&#10073;&#10073;</button>
     </div>
   </div>
 </section>
@@ -367,7 +315,7 @@
 </section>
 
 <!-- ══ FOTO FULL ══ -->
-<img src="imgs/hero.jpg" alt="Rio Piracanga correndo para o mar" class="photo-full tall"/>
+<img loading="lazy" src="imgs/hero.jpg" alt="Rio Piracanga correndo para o mar" class="photo-full tall"/>
 <p class="photo-caption">Rio Piracanga encontrando o mar · Península de Maraú · Sul da Bahia</p>
 
 <!-- ══ DECLARAÇÃO FINAL ══ -->
@@ -456,11 +404,13 @@
     if(!track) return;
     const count = track.children.length;
     const dotsWrap = document.getElementById('pcDots');
-    let i = 0, timer;
+    const pauseBtn = document.getElementById('pcPause');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let i = 0, timer = null, paused = reduce;
     for(let d=0; d<count; d++){
       const b = document.createElement('button');
       b.setAttribute('aria-label','Ir para destaque '+(d+1));
-      b.addEventListener('click', () => { go(d); reset(); });
+      b.addEventListener('click', () => { go(d); start(); });
       dotsWrap.appendChild(b);
     }
     const dots = dotsWrap.children;
@@ -469,13 +419,21 @@
       for(let k=0; k<dots.length; k++) dots[k].classList.toggle('active', k===i);
     }
     function go(n){ i = (n+count)%count; render(); }
-    document.getElementById('pcPrev').addEventListener('click', () => { go(i-1); reset(); });
-    document.getElementById('pcNext').addEventListener('click', () => { go(i+1); reset(); });
-    function start(){ timer = setInterval(() => go(i+1), 7000); }
-    function reset(){ clearInterval(timer); start(); }
+    function stop(){ clearInterval(timer); timer = null; }
+    function start(){ if(paused) return; stop(); timer = setInterval(() => go(i+1), 7000); }
+    document.getElementById('pcPrev').addEventListener('click', () => { go(i-1); start(); });
+    document.getElementById('pcNext').addEventListener('click', () => { go(i+1); start(); });
+    if(pauseBtn){
+      function setLabel(){
+        pauseBtn.innerHTML = paused ? '&#9654;' : '&#10073;&#10073;';
+        pauseBtn.setAttribute('aria-label', paused ? 'Retomar apresentação automática' : 'Pausar apresentação automática');
+      }
+      pauseBtn.addEventListener('click', () => { paused = !paused; if(paused){ stop(); } else { start(); } setLabel(); });
+      setLabel();
+    }
     const wrap = track.closest('.pc-wrap');
-    wrap.addEventListener('mouseenter', () => clearInterval(timer));
-    wrap.addEventListener('mouseleave', start);
+    wrap.addEventListener('mouseenter', stop);
+    wrap.addEventListener('mouseleave', () => { if(!paused) start(); });
     render(); start();
   })();
 </script>

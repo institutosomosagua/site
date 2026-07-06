@@ -447,3 +447,6 @@ footer {
   #main-nav .nav-links a { color:#fff; }
   #main-nav .nav-links .nav-cta { color:#fff !important; }
 }
+.pc-pause { position:absolute; bottom:-3px; right:0; width:30px; height:30px; border-radius:50%; border:1px solid rgba(255,255,255,.3); background:transparent; color:rgba(255,255,255,.72); font-size:.58rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:color .2s,border-color .2s; }
+.pc-pause:hover { color:#fff; border-color:#fff; }
+@media (prefers-reduced-motion: reduce){ .pc-track { transition:none; } }
