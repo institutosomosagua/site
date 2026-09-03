@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relatórios de Impacto — Instituto Somos Água</title>
+  <link rel="canonical" href="https://institutosomosagua.org.br/relatorios.html"/>
+  <meta name="description" content="Relatórios de Impacto da Certificação Participativa de Cuidado das Águas: adesão, qualidade da água, saneamento e aprendizados a cada ciclo, na Ecovila Piracanga."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <style>
+    #main-nav { background:#0d1e3c !important; border-bottom:none !important; }
+    #main-nav .nav-logo { color:white; }
+    #main-nav .nav-links a { color:rgba(255,255,255,.8); }
+    #main-nav .nav-links a:hover, #main-nav .nav-links a.active { color:white; }
+    #main-nav .nav-cta { color:white !important; border-color:rgba(255,255,255,.4); }
+    #main-nav .hamburger span { background:white; }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+  #relatorios{
+    --agua-900:#0b2e3d; --agua-700:#155e75; --agua-500:#1f8a9e; --agua-300:#7fc7d3; --agua-100:#e6f4f6;
+    --areia:#f6f1e7; --areia-200:#e8dfcd; --terra:#8a6a3f; --ink:#1c2a30; --ink-soft:#4e5e66;
+    --ok:#2e7d5b; --warn:#c98a1b; --radius:18px; --shadow:0 10px 30px rgba(11,46,61,.08);
+    font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--areia);line-height:1.6;
+  }
+  #relatorios *{box-sizing:border-box}
+  #relatorios h2,#relatorios h3,#relatorios h4{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;margin:0}
+  #relatorios a{color:var(--agua-700)}
+  #relatorios .container{max-width:1120px;margin:0 auto;padding:0 24px}
+  #relatorios .eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--agua-500);margin-bottom:12px}
+
+  /* ===== SEÇÃO: RELATÓRIOS DE IMPACTO ===== */
+  #relatorios{padding:96px 0 112px;position:relative;overflow:hidden}
+  #relatorios::before{
+    content:"";position:absolute;inset:-20% -10% auto -10%;height:60%;
+    background:radial-gradient(60% 60% at 30% 30%, rgba(127,199,211,.35), transparent 70%),
+               radial-gradient(50% 50% at 80% 20%, rgba(31,138,158,.18), transparent 70%);
+    pointer-events:none;z-index:0
+  }
+  #relatorios > .container{position:relative;z-index:1}
+
+  #relatorios .rel-head{max-width:720px;margin-bottom:56px}
+  #relatorios .rel-head h2{font-size:clamp(2.1rem,4vw,3.2rem);color:var(--agua-900);line-height:1.1;margin-bottom:18px}
+  #relatorios .rel-head p{font-size:1.1rem;color:var(--ink-soft);margin:0}
+
+  /* Cards dos ciclos */
+  #relatorios .cycles{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-bottom:72px}
+  #relatorios .cycle{
+    background:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);
+    display:flex;flex-direction:column;gap:18px;position:relative;border:1px solid rgba(11,46,61,.06);
+    transition:transform .25s ease, box-shadow .25s ease
+  }
+  #relatorios .cycle:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,46,61,.12)}
+  #relatorios .cycle.latest{background:linear-gradient(160deg,var(--agua-900),var(--agua-700));color:#fff;border:none}
+  #relatorios .cycle.latest .eyebrow{color:var(--agua-300)}
+  #relatorios .cycle.latest .cycle-meta,#relatorios .cycle.latest p{color:rgba(255,255,255,.82)}
+  #relatorios .cycle-tag{position:absolute;top:22px;right:22px;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    background:var(--agua-300);color:var(--agua-900);padding:6px 10px;border-radius:999px}
+  #relatorios .cycle h3{font-size:1.7rem;line-height:1.15}
+  #relatorios .cycle-meta{font-size:.92rem;color:var(--ink-soft)}
+  #relatorios .cycle p{margin:0;font-size:.98rem}
+  #relatorios .cycle-highlights{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+  #relatorios .hl{padding:14px;border-radius:12px;background:var(--agua-100)}
+  #relatorios .cycle.latest .hl{background:rgba(255,255,255,.1)}
+  #relatorios .hl b{display:block;font-family:Fraunces,serif;font-size:1.6rem;line-height:1;margin-bottom:4px}
+  #relatorios .hl span{font-size:.8rem;opacity:.85;line-height:1.3;display:block}
+  #relatorios .cycle-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+  #relatorios .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;border:1.5px solid transparent;transition:all .2s}
+  #relatorios .btn-primary{background:var(--agua-700);color:#fff}
+  #relatorios .btn-primary:hover{background:var(--agua-900)}
+  #relatorios .cycle.latest .btn-primary{background:#fff;color:var(--agua-900)}
+  #relatorios .cycle.latest .btn-primary:hover{background:var(--agua-100)}
+  #relatorios .btn-ghost{border-color:var(--agua-300);color:var(--agua-700);background:transparent}
+  #relatorios .btn-ghost:hover{background:var(--agua-100)}
+  #relatorios .cycle.latest .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+  #relatorios .cycle.latest .btn-ghost:hover{background:rgba(255,255,255,.1)}
+  #relatorios .btn svg{width:16px;height:16px}
+
+  /* Evolução em números */
+  #relatorios .evolucao{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:40px;border:1px solid rgba(11,46,61,.06);margin-bottom:56px}
+  #relatorios .evolucao-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+  #relatorios .evolucao-head h3{font-size:1.6rem;color:var(--agua-900)}
+  #relatorios .evolucao-head p{margin:6px 0 0;color:var(--ink-soft);max-width:520px}
+  #relatorios .legend{display:flex;gap:18px;font-size:.85rem;color:var(--ink-soft)}
+  #relatorios .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  #relatorios .legend .c1 i{background:var(--areia-200)} .legend .c2 i{background:var(--agua-500)}
+
+  #relatorios .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+  #relatorios .metric{padding:20px;border-radius:14px;background:var(--areia);border:1px solid var(--areia-200)}
+  #relatorios .metric-label{font-size:.85rem;color:var(--ink-soft);margin-bottom:12px;min-height:2.6em}
+  #relatorios .bars{display:flex;flex-direction:column;gap:8px}
+  #relatorios .bar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;font-size:.82rem}
+  #relatorios .bar .lbl{color:var(--ink-soft);width:56px}
+  #relatorios .bar .track{height:10px;border-radius:999px;background:rgba(11,46,61,.06);overflow:hidden}
+  #relatorios .bar .fill{height:100%;border-radius:999px;background:var(--areia-200);width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+  #relatorios .bar.c2 .fill{background:var(--agua-500)}
+  #relatorios .bar .val{font-weight:600;min-width:64px;text-align:right}
+  #relatorios .metric .delta{margin-top:12px;font-size:.82rem;font-weight:600;color:var(--ok);display:flex;align-items:center;gap:6px}
+  #relatorios .metric .delta.neutral{color:var(--ink-soft)}
+  #relatorios .metric .delta svg{width:14px;height:14px}
+  #relatorios .metric.hero{background:linear-gradient(160deg,var(--agua-100),#fff);border-color:var(--agua-300)}
+  #relatorios .metric.hero .big{font-family:Fraunces,serif;font-size:3rem;color:var(--agua-700);line-height:1;margin:6px 0 4px}
+  #relatorios .metric.hero small{display:block;font-size:.8rem;color:var(--ink-soft)}
+  #relatorios .fonte{font-size:.78rem;color:var(--ink-soft);margin-top:20px}
+
+  /* Os 8 critérios */
+  #relatorios .criterios{margin-bottom:64px}
+  #relatorios .criterios h3{font-size:1.6rem;color:var(--agua-900);margin-bottom:8px}
+  #relatorios .criterios > p{color:var(--ink-soft);margin:0 0 28px;max-width:640px}
+  #relatorios .crit-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  #relatorios .crit-grid li{background:#fff;border:1px solid rgba(11,46,61,.06);border-radius:14px;padding:20px 20px 20px 62px;position:relative;box-shadow:var(--shadow)}
+  #relatorios .crit-grid .n{position:absolute;left:18px;top:18px;width:32px;height:32px;border-radius:50%;background:var(--agua-500);color:#fff;font-weight:600;font-size:.9rem;display:grid;place-items:center}
+  #relatorios .crit-grid b{display:block;font-size:.98rem;color:var(--agua-900);margin-bottom:4px}
+  #relatorios .crit-grid small{display:block;font-size:.85rem;color:var(--ink-soft);line-height:1.45}
+
+  /* Destaques do ciclo mais recente */
+  #relatorios .destaques h3{font-size:1.6rem;color:var(--agua-900);margin-bottom:8px}
+  #relatorios .destaques > p{color:var(--ink-soft);margin:0 0 28px;max-width:640px}
+  #relatorios .dest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  #relatorios .dest{background:#fff;border-radius:14px;padding:24px;border:1px solid rgba(11,46,61,.06);box-shadow:var(--shadow)}
+  #relatorios .dest .ico{width:44px;height:44px;border-radius:12px;background:var(--agua-100);display:grid;place-items:center;margin-bottom:14px;color:var(--agua-700)}
+  #relatorios .dest .ico svg{width:22px;height:22px}
+  #relatorios .dest h4{margin:0 0 6px;font-size:1.02rem;color:var(--agua-900)}
+  #relatorios .dest p{margin:0;font-size:.92rem;color:var(--ink-soft)}
+
+  /* Nota metodológica */
+  #relatorios .nota{margin-top:56px;padding:24px 28px;border-left:4px solid var(--agua-300);background:rgba(255,255,255,.6);border-radius:0 14px 14px 0;font-size:.92rem;color:var(--ink-soft)}
+  #relatorios .nota strong{color:var(--agua-900)}
+
+  @media (max-width:640px){
+    #relatorios{padding:64px 0 80px}
+    #relatorios .cycle{padding:26px}
+    #relatorios .evolucao{padding:26px}
+    #relatorios .cycle-highlights{grid-template-columns:1fr 1fr}
+  }
+</style>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://institutosomosagua.org.br/relatorios.html"/>
+  <meta property="og:site_name" content="Instituto Somos Água"/>
+  <meta property="og:title" content="Relatórios de Impacto — Instituto Somos Água"/>
+  <meta property="og:description" content="Relatórios de Impacto da Certificação Participativa de Cuidado das Águas, ciclo a ciclo, na Ecovila Piracanga."/>
+  <meta property="og:image" content="https://institutosomosagua.org.br/imgs/og-image.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:locale" content="pt_BR"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://institutosomosagua.org.br/imgs/og-image.png"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VGXWJZ3L4"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-5VGXWJZ3L4');</script>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo" style="padding:0;line-height:0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 68" height="42" style="display:block;"><defs><radialGradient id="dg" cx="38%" cy="28%" r="65%"><stop offset="0%" stop-color="#9AE8F8"/><stop offset="45%" stop-color="#1BBDD8"/><stop offset="100%" stop-color="#0A7A96"/></radialGradient></defs><ellipse cx="33" cy="59" rx="24" ry="4.5" stroke="#1BBAD6" stroke-width="1.0" fill="none" opacity="0.38"/><ellipse cx="33" cy="59" rx="15" ry="3" stroke="#1BBAD6" stroke-width="1.2" fill="none" opacity="0.58"/><ellipse cx="33" cy="59" rx="8" ry="1.8" stroke="#1BBAD6" stroke-width="1.5" fill="none" opacity="0.82"/><path d="M33 5 C33 5 14 29 14 43 C14 53.8 22.6 60 33 60 C43.4 60 52 53.8 52 43 C52 29 33 5 33 5Z" fill="url(#dg)"/><ellipse cx="25" cy="28" rx="3.5" ry="8" fill="white" opacity="0.3" transform="rotate(-20 25 28)"/><text x="64" y="38" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="400" font-style="italic" fill="white" letter-spacing="0.5">Somos Água</text><text x="67" y="56" font-family="Inter, sans-serif" font-size="9.5" font-weight="300" fill="rgba(255,255,255,0.58)" letter-spacing="6">INSTITUTO</text></svg></a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="certificacao.html">Certificação</a></li>
+    <li><a href="resultados.html">Resultados</a></li>
+    <li><a href="relatorios.html" class="active">Relatórios</a></li>
+    <li><a href="educacao.html">Educação</a></li>
+    <li><a href="proximos.html">Próximos Passos</a></li>
+    <li><a href="apoie.html">Apoie</a></li>
+    <li><a href="index.html#contato" class="nav-cta">Contato</a></li>
+  </ul>
+</nav>
+
+<section id="relatorios" aria-labelledby="relatorios-title">
+  <div class="container">
+
+    <header class="rel-head">
+      <span class="eyebrow">Transparência</span>
+      <h2 id="relatorios-title">Relatórios de Impacto da Certificação Participativa</h2>
+      <p>A cada ciclo anual da Certificação Participativa de Cuidado das Águas, publicamos o que aconteceu no território: quantas casas aderiram, o que as análises de água mostraram, como evoluíram os sistemas de saneamento e o que aprendemos pelo caminho.</p>
+    </header>
+
+    <!-- Cards dos ciclos -->
+    <div class="cycles">
+
+      <!-- CICLO II (mais recente) -->
+      <article class="cycle latest">
+        <span class="cycle-tag">Mais recente</span>
+        <span class="eyebrow">Ciclo II</span>
+        <h3>Relatório de Impacto<br>2025 / 2026</h3>
+        <div class="cycle-meta">agosto de 2025 a julho de 2026 · Ecovila Piracanga, Maraú — BA</div>
+        <p>O segundo ano completo da Certificação: 52 casas participantes, nenhuma amostra de água de consumo com E. coli, reconhecimento como tecnologia social pela Fundação Banco do Brasil e o encontro Território do Cuidar como encerramento.</p>
+        <div class="cycle-highlights">
+          <div class="hl"><b>52</b><span>casas participantes (60,5% do território)</span></div>
+          <div class="hl"><b>0</b><span>amostras com E. coli entre 56 analisadas</span></div>
+          <div class="hl"><b>77%</b><span>das fossas antigas desativadas ou em transição</span></div>
+          <div class="hl"><b>110</b><span>pessoas no Território do Cuidar</span></div>
+        </div>
+        <div class="cycle-actions">
+          <a class="btn btn-primary" href="#" data-relatorio="ciclo-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Ler relatório completo
+          </a>
+          <a class="btn btn-ghost" href="#" data-relatorio="ciclo-2-pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Baixar PDF
+          </a>
+        </div>
+      </article>
+
+      <!-- CICLO I -->
+      <article class="cycle">
+        <span class="eyebrow">Ciclo I</span>
+        <h3>Relatório de Impacto<br>2024 / 2025</h3>
+        <div class="cycle-meta">agosto de 2024 a julho de 2025 · Ecovila Piracanga, Maraú — BA</div>
+        <p>O primeiro ciclo da Certificação: o nascimento do Instituto Somos Água, a definição dos 8 critérios, a coleta coletiva de água com laboratório especializado e duas rodadas de revisão de saneamento em todas as casas participantes.</p>
+        <div class="cycle-highlights">
+          <div class="hl"><b>47</b><span>casas participantes (56,6% das 83 de Piracanga)</span></div>
+          <div class="hl"><b>42</b><span>amostras de poço analisadas em laboratório</span></div>
+          <div class="hl"><b>46</b><span>sistemas de saneamento revisados</span></div>
+          <div class="hl"><b>100%</b><span>das casas receberam visita de transparência</span></div>
+        </div>
+        <div class="cycle-actions">
+          <a class="btn btn-primary" href="relatorio-impacto-ciclo-1-2024-25.pdf" target="_blank" rel="noopener" data-relatorio="ciclo-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Ler relatório completo
+          </a>
+          <a class="btn btn-ghost" href="relatorio-impacto-ciclo-1-2024-25.pdf" download data-relatorio="ciclo-1-pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Baixar PDF
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Evolução entre ciclos -->
+    <div class="evolucao">
+      <div class="evolucao-head">
+        <div>
+          <span class="eyebrow">Evolução</span>
+          <h3>De um ciclo para o outro</h3>
+          <p>Os mesmos indicadores, medidos ano a ano. É assim que a Certificação torna visível o cuidado coletivo com as Águas de Piracanga.</p>
+        </div>
+        <div class="legend"><span class="c1"><i></i>Ciclo I</span><span class="c2"><i></i>Ciclo II</span></div>
+      </div>
+
+      <div class="metrics">
+
+        <div class="metric hero">
+          <div class="metric-label">Amostras de água de consumo com E. coli (contaminação fecal)</div>
+          <div class="big">0</div>
+          <small>de 56 amostras no Ciclo II — contra 6 de 42 (14,3%) no Ciclo I</small>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label">Adesões voluntárias à Certificação</div>
+          <div class="bars">
+            <div class="bar c1"><span class="lbl">Ciclo I</span><div class="track"><div class="fill" data-w="56.6"></div></div><span class="val">47 · 56,6%</span></div>
+            <div class="bar c2"><span class="lbl">Ciclo II</span><div class="track"><div class="fill" data-w="60.5"></div></div><span class="val">52 · 60,5%</span></div>
+          </div>
+          <div class="delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>+5 casas</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label">Amostras de poço analisadas em laboratório</div>
+          <div class="bars">
+            <div class="bar c1"><span class="lbl">Ciclo I</span><div class="track"><div class="fill" data-w="75"></div></div><span class="val">42</span></div>
+            <div class="bar c2"><span class="lbl">Ciclo II</span><div class="track"><div class="fill" data-w="100"></div></div><span class="val">56</span></div>
+          </div>
+          <div class="delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>+33%</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label">Sistemas de saneamento revisados</div>
+          <div class="bars">
+            <div class="bar c1"><span class="lbl">Ciclo I</span><div class="track"><div class="fill" data-w="92"></div></div><span class="val">46</span></div>
+            <div class="bar c2"><span class="lbl">Ciclo II</span><div class="track"><div class="fill" data-w="100"></div></div><span class="val">50</span></div>
+          </div>
+          <div class="delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>inclui águas cinzas</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label">Visitas de transparência realizadas</div>
+          <div class="bars">
+            <div class="bar c1"><span class="lbl">Ciclo I</span><div class="track"><div class="fill" data-w="100"></div></div><span class="val">47 · 100%</span></div>
+            <div class="bar c2"><span class="lbl">Ciclo II</span><div class="track"><div class="fill" data-w="94"></div></div><span class="val">49 · 94%</span></div>
+          </div>
+          <div class="delta neutral">3 casas não responderam ao agendamento</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label">Casas e estabelecimentos no território</div>
+          <div class="bars">
+            <div class="bar c1"><span class="lbl">Ciclo I</span><div class="track"><div class="fill" data-w="96.5"></div></div><span class="val">83</span></div>
+            <div class="bar c2"><span class="lbl">Ciclo II</span><div class="track"><div class="fill" data-w="100"></div></div><span class="val">86</span></div>
+          </div>
+          <div class="delta neutral">34 edificações ainda fora da Certificação</div>
+        </div>
+
+      </div>
+      <p class="fonte">Fonte: Instituto Somos Água — Relatório de Impacto 2024/25 (Ciclo I) e Relatório de Impacto 2025/26 (Ciclo II). Os resultados referem-se às amostras e sistemas analisados em cada ciclo.</p>
+    </div>
+
+    <!-- Os 8 critérios -->
+    <div class="criterios">
+      <span class="eyebrow">O que é avaliado</span>
+      <h3>Os 8 critérios da Certificação</h3>
+      <p>Cada casa participante dialoga sobre estes compromissos na Visita de Transparência. Não é fiscalização: é um processo de conscientização e mudança de cultura.</p>
+      <ol class="crit-grid">
+        <li><span class="n">1</span><b>Produtos 100% biodegradáveis</b><small>O lençol freático recebe tudo o que usamos no corpo e na limpeza da casa.</small></li>
+        <li><span class="n">2</span><b>Saneamento ecológico revisado</b><small>Sistemas instalados e revisados regularmente para não colocar as Águas em risco.</small></li>
+        <li><span class="n">3</span><b>Análises periódicas da água</b><small>Coleta anual em laboratório: E. coli e parâmetros físico-químicos.</small></li>
+        <li><span class="n">4</span><b>Filtro de barro com vela tripla ação</b><small>Solução simples e acessível para a água de consumo da casa.</small></li>
+        <li><span class="n">5</span><b>Destinação adequada dos resíduos</b><small>Repensar o consumo e usar o centro de coleta seletiva local.</small></li>
+        <li><span class="n">6</span><b>Jardins biodiversos</b><small>Solo coberto e espécies nativas: mais infiltração, menos erosão.</small></li>
+        <li><span class="n">7</span><b>Controle de focos de dengue</b><small>Água em movimento, limpa e sem criadouros de Aedes aegypti.</small></li>
+        <li><span class="n">8</span><b>Transmissão dos critérios</b><small>Cada participante conhece, aplica e transmite os critérios a visitantes e vizinhos.</small></li>
+      </ol>
+    </div>
+
+    <!-- Destaques do Ciclo II -->
+    <div class="destaques">
+      <span class="eyebrow">Ciclo II em destaque</span>
+      <h3>O que marcou o último ciclo</h3>
+      <p>Além dos números, alguns acontecimentos mudaram o patamar do projeto.</p>
+      <div class="dest-grid">
+
+        <div class="dest">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-2 5 9-9-9-9 2 5-7 4z"/></svg></div>
+          <h4>Tecnologia social reconhecida</h4>
+          <p>Em fevereiro de 2026, a Certificação foi reconhecida como tecnologia social pela Fundação Banco do Brasil.</p>
+        </div>
+
+        <div class="dest">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7c3.3 4 6 7.6 6 10.8a6 6 0 0 1-12 0c0-3.2 2.7-6.8 6-10.8z"/></svg></div>
+          <h4>Águas sem contaminação fecal</h4>
+          <p>Nenhuma das 56 amostras de água de consumo analisadas apresentou E. coli — no Ciclo I, 6 amostras haviam apresentado.</p>
+        </div>
+
+        <div class="dest">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+          <h4>Fossas antigas em transição</h4>
+          <p>10 das 13 fossas e ecofossas identificadas já foram desativadas ou estão migrando para biodigestor ou banheiro seco.</p>
+        </div>
+
+        <div class="dest">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h4>Visitas entre pares</h4>
+          <p>Primeiras agentes locais formadas para conduzir as Visitas de Transparência — rumo a um processo feito pelos próprios moradores.</p>
+        </div>
+
+        <div class="dest">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h4>Território do Cuidar</h4>
+          <p>110 participantes, mais de 30 organizações e 9 territórios do sul da Bahia reunidos em Piracanga para encerrar o ciclo.</p>
+        </div>
+
+        <div class="dest">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <h4>Rede de conhecimento</h4>
+          <p>Parcerias com SOS Mata Atlântica, Instituto BIOMAS Brasil e IFES; artigo científico em revisão; podcast Somos Água com quase 40 episódios.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="nota">
+      <strong>Nota metodológica.</strong> Os resultados apresentados referem-se às amostras e aos sistemas efetivamente analisados em cada ciclo, e não ao aquífero como um todo. A ausência de bactérias indicadoras (como E. coli) nas amostras não comprova, por si só, a eliminação de toda contaminação — por isso a Certificação mantém o monitoramento anual e amplia progressivamente os parâmetros analisados.
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Instituto Somos Água</div>
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Instituto Somos Água</h4><p>Ecovila Piracanga · Sul da Bahia · Brasil</p></div>
+      <div class="footer-col"><h4>Páginas</h4><a href="apoie.html">Apoie</a><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="resultados.html">Resultados</a><a href="educacao.html">Educação</a><a href="proximos.html">Próximos Passos</a></div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/institutosomosagua/" target="_blank" rel="noopener" class="social-btn ig" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.linkedin.com/company/instituto-somos-%C3%A1gua/" target="_blank" rel="noopener" class="social-btn li" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://open.spotify.com/show/7oKQB1N1HVJyOMrPgFYadg" target="_blank" rel="noopener" class="social-btn sp" aria-label="Spotify"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.56.3z"/></svg></a>
+          <a href="https://www.youtube.com/@institutosomosagua" target="_blank" rel="noopener" class="social-btn yt" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="mailto:institutosomosagua@gmail.com" class="social-btn em" aria-label="E-mail"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+        </div>
+        <a href="mailto:institutosomosagua@gmail.com" class="footer-email">institutosomosagua@gmail.com</a>
+      </div>
+    </div>
+    <p class="footer-bottom">Relatório de Impacto 2024/25 · Instituto Somos Água</p>
+  </div>
+</footer>
+<script>
+  // Anima as barras quando a seção entra na tela
+  (function(){
+    var fills = document.querySelectorAll('#relatorios .fill');
+    function run(){ fills.forEach(function(f){ f.style.width = f.getAttribute('data-w') + '%'; }); }
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting) { run(); io.disconnect(); } });
+      }, {threshold:.2});
+      io.observe(document.querySelector('#relatorios .evolucao'));
+    } else { run(); }
+  })();
+</script>
+<script>document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));</script>
+</body>
+</html>
